@@ -1,23 +1,22 @@
+// Copyright 2017 Sysdata S.p.A.
 //
-//  SDLocalizationManager.h
-//  SysdataCore
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
 //
-//  Created by Paolo Ardia on 16/11/15.
+// http://www.apache.org/licenses/LICENSE-2.0
 //
-//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 #import <Foundation/Foundation.h>
 #import "NSLocale+RosettaUtils.h"
 #import "SDLocalizationLogger.h"
 
-typedef NS_ENUM (NSUInteger, LMLogLevel)
-{
-    LMLogLevelVerbose = 1,
-    LMLogLevelWarning,
-    LMLogLevelError
-};
 
-// ridefinizione delle macro per la localizzazione delle stringhe
 #ifdef SDLocalizedString
 #undef SDLocalizedString
 #endif
@@ -47,11 +46,11 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
 @protocol SDLocalizationManagerDelegate <NSObject>
 @optional
 /**
- *  L'implementazione di questo metodo è utile solo quando si usano locale non standard, le cui localizzazioni e formattazioni devono rispecchiare quello di un altro locale (standard).
+ * Implementing this method is only useful when using nonstandard locale, whose localization and formatting should reflect that of another locale (standard).
  *
- *  @param locale Il locale non standard da convertire.
+ * @param locale The non-standard locale to convert.
  *
- *  @return L'identificativo di un locale standard accettato dal sistema operativo.
+ * @return The identifier of a standard locale accepted by the operating system.
  */
 - (NSString*)ISOLocaleIdentifierForNonStandardLocale:(NSString*)locale;
 @end
@@ -61,12 +60,12 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
 @class SDLocalizationManager;
 
 /**
- *  Questa classe permette di gestire le localizzazioni in maniera indipendente dal sistema operativo.
- *  Per renderla indipendente è necessario settare i locale supportati tramite un array o un file plist.
- *  Il manager può accettare anche locale non standard, ma in tal caso ha bisogno di un delegate per a quale lingua corrispondono, altrimenti non è in grado di tradurre correttamente.
- *  Il manager prevede sempre un locale di default, che se non diversamente specificato, è "en".
+ * This class allows you to manage your locations independently from the operating system.
+ * To make it stand-alone, you need to set up locales supported by an array or plist file.
+ * The manager may also accept non-standard locale, but in this case he needs a delegate to which language he or she is otherwise unable to translate correctly.
+ * The manager always provides a default locale, which unless otherwise specified, is "en".
  *
- *  Il manager mette a disposizione anche i formatter più comuni per date e numeri, utilizzando le informazioni del locale selezionato per formattare in maniera conforme al locale stesso.
+ * The manager also provides the most common formatters for dates and numbers, using the information of the selected locale to format in a conforming manner to the locale itself.
  */
 #if BLABBER
 @interface SDLocalizationManager : NSObject <SDLoggerModuleProtocol>
@@ -78,23 +77,23 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
 
 #pragma mark - Locales
 /**
- *  Il locale attualmente selezionato.
+ * The currently selected locale.
  *
- *  Prima di settare i locale supportati è nil, mentre subito dopo è uguale a quello del sistema operativo (se supportato) o a quello di default. Il locale selezionato viene salvato negli user defaults.
+ * Before setting up the supported locales is nil, but immediately after it is the same as the operating system (if supported) or the default one. The selected locale is saved in user defaults.
  */
 @property (nonatomic, readonly) NSLocale *selectedLocale;
 
 /**
- *  Il locale di default.
+ * The default locale.
  *
- *  Viene selezionato in fase di inizializzazione se il locale del sistema operativo non è tra quelli supportati. Viene utilizzato anche come ultima risorsa nel caso in cui una stringa non è localizzata nel locale selezionato.
+ * Is selected during initialization if the operating system locale is not one of the supported ones. It is also used as the last resource if a string is not localized in the selected locale.
  */
 @property (nonatomic, readonly) NSLocale *defaultLocale;
 
 /**
- *  Indica se il manager può accettare solo i locale riconosciuti dal sistema operativo.
+ * Indicates whether the manager can accept only the recognized premises by the operating system.
  *
- *  Questa impostazione va cambiata prima di settare i supportedLocales. Il default è YES.
+ * This setting must be changed before setting the supportedLocales. The default is YES.
  */
 @property (nonatomic, assign) BOOL allowsOnlyLocalesAvailableOnSystem;
 
@@ -102,269 +101,269 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
 
 #pragma mark - Selected Locale & Default Locale
 /**
- *  Imposta il selectedLocale in base all'identificativo passato, verificando che il locale sia supportato.
+ * Set the selectedLocale based on the past id, verifying that the locale is supported.
  *
- *  Se il selectedLocale è cambiato, allora lancia una notifica SDLocalizationManagerLanguageDidChangeNotification
+ * If the selectedLocale has changed, then launches an SDLocalizationManagerLanguageDidChangeNotification notification
  *
- *  @param identifier Identificativo del locale da impostare come selezionato.
+ * @param identifier The locale identifier to be set as selected.
  */
 - (void) setSelectedLocaleWithIdentifier:(NSString*)identifier;
 
 /**
- *  Controlla se il selectedLocale ha un identificativo uguale a quello passato.
+ * Check if the selectedLocale has an identifier equal to the previous one.
  *
- *  @param identifier Identificativo da controllare.
+ * @param identifier Identifier to be checked.
  *
- *  @return YES se il selectedLocale ha un identificativo uguale a quello passato, altrimenti NO.
+ * @return YES if the selectedLocale has an identifier equal to the previous one, otherwise NO.
  */
 - (BOOL) isLocaleWithIdentifierSelected:(NSString*)identifier;
 
 /**
- *  Imposta il defaultLocale in base all'identificativo passato.
+ * Set the defaultLocale based on the past ID.
  *
- *  @param identifier Identificativo del locale da impostare come default.
+ * @param identifier The locale identifier to be set as default.
  */
 - (void) setDefaultLocaleWithIdentifier:(NSString*)identifier;
 
 /**
- *  Cancella le impostazioni salvate negli user defaults in modo che il selected locale venga ricalcolato.
- *  Questo metodo deve essere chiamato prima di effettuare qualsiasi impostazione del SDLocalizationManager.
+ * Erases saved settings in user defaults so that the local selection is recalculated.
+ * This method must be called before making any setting in the SDLocalizationManager.
  *
- *  @return YES se riesce a resettare i settings.
+ * @return YES if you can reset the settings.
  */
 - (BOOL) resetSavedSettings;
 
 #pragma mark - Supported Locales
 /**
- *  Imposta i locales passati come "supportati" dall'applicazione.
+ * Set passed locales as "supported" by the application.
  *
- *  Non settare i supportedLocales se si vuole lasciare la gestione della lingua al sistema operativo.
+ * Do not set supportedLocales if you want to leave language management to the operating system.
  *
- *  @param supportedLocales un NSArray di oggetti NSString che rappresentano identificativi validi per NSLocale.
+ * @param supportedLocales an NSArring NSArray that represents valid identifiers for NSLocale.
  */
 - (void) setSupportedLocales:(NSArray*)supportedLocales;
 
 /**
- *  Carica e imposta i locales "supportati" dal file nelle resources.
+ * Load and set the "supported" locales from the file in the resources.
  *
- *  Se il nome del file non ha estensione, viene scelto "plist" come default.
+ * If the file name does not have extension, "plist" is selected as the default.
  *
- *  @param fileName Il nome del file nelle resources contenente l'array di locales supportati.
+ * @param fileName The file name in the resources that contain the supported locales array.
  */
 - (void) loadSupportedLocalesFromFileWithName:(NSString*)fileName;
 
 /**
- *  Restistuisce la lista degli identificativi dei locale supportati.
+ * Restores the list of supported locale identifiers.
  *
- *  @return I locales supportati.
+ * @return Supported locales.
  */
 - (NSArray*) supportedLocales;
 
 /**
- *  Controlla se il locale con l'identificativo passato è tra quelli supportati.
+ * Check whether the locale with the past ID is among the supported ones.
  *
- *  @param identifier Identificativo da controllare.
+ * @param identifier Identifier to be checked.
  *
- *  @return YES se il locale è supportato, altrimenti NO.
+ * @return YES if the locale is supported, otherwise NO.
  */
 - (BOOL) supportsLocaleWithIdentifier:(NSString*)identifier;
 
 /**
- *  Restituisce il locale supportato più specifico corrispondente all'identificativo passato in argomento.
- *  Se la stringa passata identifica un locale specifico per country (ad es.: "es_ES") e questo non è supportato, allora questo metodo verifica se l'app supporta il relativo locale generico (ad es.: "es"). In tal caso lo restituisce, altrimenti restituisce nil.
+ * Returns the most specific supported locale corresponding to the past argument in the topic.
+ * If the past string identifies a country-specific locale (eg "es_ES") and this is not supported, then this method verifies whether the app supports its generic locale (eg "es"). In that case returns it, otherwise it returns nil.
  *
- *  @param identifier Identificativo del locale da restituire.
+ * @param identifier The locale identifier to be returned.
  *
- *  @return l'oggetto NSLocale supportato corrispondente all'identificativo dato.
+ * Reset the supported NSLocal object corresponding to the given ID.
  */
 - (NSLocale*) supportedLocaleWithIdentifier:(NSString*)identifier;
 
 #pragma mark - Display Names
 /**
- *  Restituisce i nomi dei locales supportati localizzati nella lingua attualmente selezionata.
+ * Returns the names of localized supported locales in the currently selected language.
  *
- *  @return un array di NSString rappresentanti i nomi dei locales supportati.
+ * @resurn an array of NSString representing the names of supported locales.
  */
 - (NSArray*) supportedLocalesNamesInSelectedLocale;
 
 /**
- *  Restituisce i nomi dei locales supportati localizzati nella rispettiva lingua.
+ * Returns the names of supported locales located in their respective language.
  *
- *  @return un array di NSString rappresentanti i nomi dei locales supportati.
+ * @resurn an array of NSString representing the names of supported locales.
  */
 - (NSArray*) supportedLocalesNamesInCorrespondingLocale;
 
 /**
- *  Restituisce i nomi dei locales supportati come riportati nel file Localizable.strings associato al selectedLocale.
+ * Returns the names of the supported locales as reported in the Localizable.strings file associated with the selectedLocale.
  *
- *  @return un array di NSString rappresentanti i nomi dei locales supportati.
+ * @resurn an array of NSString representing the names of supported locales.
  */
 - (NSArray*) supportedLocalesNamesInLocalizableStrings;
 
 /**
- *  Restituisce i nomi dei locales supportati come riportati nel file .strings indicato e associato al selectedLocale.
+ * Returns the names of supported locales as reported in the .strings file indicated and associated with the selectedLocale.
  *
- *  @return un array di NSString rappresentanti i nomi dei locales supportati.
+ * @resurn an array of NSString representing the names of supported locales.
  */
 - (NSArray *) supportedLocalesNamesInTableWithName:(NSString*)tableName;
 
 #pragma mark - Localized Strings
 /**
- *  Restituisce il valore della chiave localizzata nel Localizable.strings associato al selectedLocale.
+ * Returns the localized key value in Localizable.strings associated with the selectedLocale.
  *
- *  La ricerca viene effettuata prima usando il selectedLocale, poi usando l'eventuale locale non specifico per country, infine usando il defaultLocale.
+ * Search is done first using the selectedLocale, then using any locale that is not specific to country, and finally using the defaultLocale.
  *
- *  @param key La chiave localizzata.
+ * @param key The localized key.
  *
- *  @return Il valore associato alla chiave localizzata.
+ * @return The value associated with the localized key.
  */
 - (NSString*) localizedKey:(NSString*)key;
 
 /**
- *  Restituisce il valore della chiave localizzata nel .strings passato associato al selectedLocale.
+ * Returns the localized key value in the past strings associated with the selectedLocale.
  *
- *  La ricerca viene effettuata prima usando il selectedLocale, poi usando l'eventuale locale non specifico per country, infine usando il defaultLocale.
+ * Search is done first using the selectedLocale, then using any locale that is not specific to country, and finally using the defaultLocale.
  *
- *  @param key       La chiave localizzata.
- *  @param tableName Il nome del .strings contenente la chiave.
+ * @param key The localized key.
+ * @param tableName The .strings name that contains the key.
  *
- *  @return Il valore associato alla chiave localizzata.
+ * @return The value associated with the localized key.
  */
 - (NSString*) localizedKey:(NSString*)key fromTable:(NSString*)tableName;
 
 /**
- *  Restituisce il valore della chiave localizzata nel Localizable.strings associato al selectedLocale.
+ * Returns the localized key value in Localizable.strings associated with the selectedLocale.
  *
- *  La ricerca viene effettuata prima usando il selectedLocale, poi usando l'eventuale locale non specifico per country, infine usando il defaultLocale.
+ * Search is done first using the selectedLocale, then using any locale that is not specific to country, and finally using the defaultLocale.
  *
- *  @param key          La chiave localizzata.
- *  @param defaultValue Valore di default da restituire nel caso in cui la chiave non esista.
+ * @param key The localized key.
+ * @param defaultValue The default value to be returned if the key does not exist.
  *
- *  @return Il valore associato alla chiave localizzata o il valore di default passato.
+ * @return The value associated with the localized key or the default value passed.
  */
 - (NSString*) localizedKey:(NSString*)key withDefaultValue:(NSString*)defaultValue;
 
 /**
- *  Restituisce il valore della chiave localizzata nel .strings passato associato al selectedLocale.
+ * Returns the localized key value in the past strings associated with the selectedLocale.
  *
- *  La ricerca viene effettuata prima usando il selectedLocale, poi usando l'eventuale locale non specifico per country, infine usando il defaultLocale.
+ * Search is done first using the selectedLocale, then using any locale that is not specific to country, and finally using the defaultLocale.
  *
- *  @param key          La chiave localizzata.
- *  @param tableName    Il nome del .strings contenente la chiave.
- *  @param defaultValue Valore di default da restituire nel caso in cui la chiave non esista.
+ * @param key The localized key.
+ * @param tableName The .strings name that contains the key.
+ * @param defaultValue The default value to be returned if the key does not exist.
  *
- *  @return Il valore associato alla chiave localizzata o il valore di default passato.
+ * @return The value associated with the localized key or the default value passed.
  */
 - (NSString *)localizedKey:(NSString *)key fromTable:(NSString *)tableName withDefaultValue:(NSString *)defaultValue;
 
 /**
- *  Restituisce il valore della chiave localizzata nel .strings passato associato al selectedLocale.
+ * Returns the localized key value in the past strings associated with the selectedLocale.
  *
- *  La ricerca viene effettuata prima usando il selectedLocale, poi usando l'eventuale locale non specifico per country, infine usando il defaultLocale.
+ * Search is done first using the selectedLocale, then using any locale that is not specific to country, and finally using the defaultLocale.
  *
- *  @param key          La chiave localizzata.
- *  @param tableName    Il nome del .strings contenente la chiave.
- *  @param placeholderDictionary    Dizionario che ha come chiavi le stringhe da cercare nella localizedString e da sostituire con i relativi valori.
- *  @param defaultValue Valore di default da restituire nel caso in cui la chiave non esista.
+ * @param key The localized key.
+ * @param tableName The .strings name that contains the key.
+ * @param placeholderDictionary A dictionary that has the keys as strings to look for in localizedString and to be replaced with its values.
+ * @param defaultValue The default value to be returned if the key does not exist.
  *
- *  @return Il valore associato alla chiave localizzata o il valore di default passato.
+ * @return The value associated with the localized key or the default value passed.
  */
 - (NSString*) localizedKey:(NSString*)key fromTable:(NSString*)tableName placeholderDictionary:(NSDictionary<NSString*, NSString*>*)placeholderDictionary withDefaultValue:(NSString*)defaultValue;
 
 /**
- *  Recupera e restituisce tutte le stringhe localizzate associate alle chiavi che hanno il formato "<prefix>.%d"
+ * Retrieves and returns all localized strings associated with keys that have the format "<prefix>.% D"
  *
- *  @param prefix Il prefisso della lista di chiavi localizzate da recuperare.
+ * @param prefix The prefix of the localized key list to retrieve.
  *
- *  @return La lista di tutte le stringhe associate alle chiavi con il prefisso passato.
+ * @return The list of all keys associated with the past prefix.
  */
 - (NSArray*) arrayOfLocalizedStringsWithPrefix:(NSString*)prefix;
 
 #pragma mark - Adding strings
 
 /**
- *  Aggiunge il dizionario di stringhe passato alla tabella data. Se la tabella non esiste viene creata. Se la tabella esiste le stringhe vengono unite a quelle preesistenti, sovrascrivendo le chiavi che combaciano.
+ * Adds the past string dictionary to the date table. If the table does not exist, it is created. If the table exists the strings are joined to the preexisting ones, overwriting the keys that match.
  *
- *  @param strings   Dizionario di stringhe localizzate.
- *  @param tableName Nome della tabella alla quale vanno aggiunte le stringhe.
+ * @param strings Local strings dictionary.
+ * @param tableName Name of the table to which the strings are to be added.
  */
 - (void) addStrings:(NSDictionary<NSString*, NSString*>*)strings toTableWithName:(NSString*)tableName;
 
 #pragma mark - Formatters & Calendars Management
 
 /**
- *  Questo metodo resetta tutti i formatter e i calendari.
+ * This method resets all formatters and calendars.
  *
- *  Le sottoclassi che aggiungono formatter o calendari devono sovrascrivere questo metodo e chiamarne il super.
+ * Subclasses that add formatters or calendars must overwrite this method and call it super.
  */
 - (void)resetFormattersAndCalendars;
 
 #pragma mark - Date Formatters
 
 /**
- *  Restituisce il locale da usare per i formatters.
+ * Returns the locale to use for formatters.
  *
- *  @return Il locale da usare per i formatters.
+ * @return The locale to use for formatters.
  */
 - (NSLocale*)formatterLocale;
 
 /**
- *  Questo formatter formatta le date nel classico formato "dd/MM/yyyy" localizzate secondo il selectedLocale
- *  oppure, se questo non è valorizzato, secondo il [NSLocale currentLocale].
+ * This formatter formats the dates in the classic "dd / dd / yyyy" format, localized according to the selectedLocale
+ * Or, if this is not validated, according to [NSLocale currentLocale].
  */
 @property (nonatomic, strong) NSDateFormatter* simpleDateFormatter;
 
 /**
- *  Questo formatter formatta il tempo nel formato a 12 ore seguito dal periodo "12:24 PM" localizzate secondo il selectedLocale
- *  oppure, se questo non è valorizzato, secondo il [NSLocale currentLocale].
+ * This formatter formats the time in the 12-hour format followed by the "12:24 PM" period, which is localized according to the selectedLocale
+ * Or, if this is not validated, according to [NSLocale currentLocale].
  */
 @property (nonatomic, strong) NSDateFormatter* twelveHoursTimeFormatter;
 
 /**
- *  Questo formatter formatta il tempo nel formato a 24 ore "22:24" localizzate secondo il selectedLocale
- *  oppure, se questo non è valorizzato, secondo il [NSLocale currentLocale].
+ * This formatter formats the time in the 24-hour format "22:24" localized according to the selectedLocale
+ * Or, if this is not validated, according to [NSLocale currentLocale].
  */
 @property (nonatomic, strong) NSDateFormatter* twentyFourHoursTimeFormatter;
 
 /**
- *  Questo formatter formatta le date nel classico formato "dd/MM/yyyy" e il tempo nel formato a 24 ore "22:24" localizzate secondo il selectedLocale
- *  oppure, se questo non è valorizzato, secondo il [NSLocale currentLocale].
+ * This formatter formats the dates in the classic "dd / mm / yyyy" format and the 24 hour "22:24" time format localized according to the selectedLocale
+ * Or, if this is not validated, according to [NSLocale currentLocale].
  */
 @property (nonatomic, strong) NSDateFormatter* simpleDateTimeFormatter;
 
 /**
- *  Questo formatter formatta le date nel formato "yyyy-MM-dd hh:mm:ss.SSS" usando la timezone GMT.
+ * This formatter formats dates in "yyyy-MM-dd hh: mm: ss.SSS" format using the GMT timezone.
  */
 @property (nonatomic, strong) NSDateFormatter* serverDateTimeFormatter;
 
 #pragma mark - User Default Date Formatters
 /**
- *  Formato per le date utilizzato dagli userDefault formatters.
- *  Quando settato viene salvato negli userDefaults e i relativi formatter non tengono conto del locale.
+ * Format for dates used by userDefault formatters.
+ * When set is saved in userDefaults and their formatters do not account for the locale.
  *
- *  Il valore di default è "dd/MM/yyyy".
+ * The default value is "dd / MM / yyyy".
  */
 @property (nonatomic, strong) NSString *userDefaultDateFormat;
 /**
- *  Formato per il tempo utilizzato dagli userDefault formatters.
- *  Quando settato viene salvato negli userDefaults e i relativi formatter non tengono conto del locale.
+ * Format for time used by userDefault formatters.
+ * When set is saved in userDefaults and their formatters do not account for the locale.
  *
- *  Il valore di default è "HH:mm".
+ * The default value is "HH: mm".
  */
 @property (nonatomic, strong) NSString *userDefaultTimeFormat;
 
 /**
- *  Questo formatter formatta le date secondo il formato definito in userDefaultDateFormat.
+ * This formatter formats dates according to the format defined in userDefaultDateFormat.
  */
 @property (nonatomic, strong) NSDateFormatter* userDefaultDateFormatter;
 
 /**
- *  Questo formatter formatta il tempo secondo il formato definito in userDefaultTimeFormat.
+ * This formatter formats time according to the format defined in userDefaultTimeFormat.
  */
 @property (nonatomic, strong) NSDateFormatter* userDefaultTimeFormatter;
 
 /**
- *  Questo formatter formatta le date secondo il formato definito in userDefaultDateFormat, e il tempo secondo il formato definito in userDefaultTimeFormat. Lascia uno spazio tra la data e l'ora. 
+ * This formatter formats dates according to the format defined in userDefaultDateFormat, and the time according to the format defined in userDefaultTimeFormat. Leave a space between the date and time.
  */
 @property (nonatomic, strong) NSDateFormatter* userDefaultDateTimeFormatter;
 
@@ -374,98 +373,98 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
 #define kGroupingSeparatorLocalizedKey      @"LM_grouping_separator"
 
 /**
- *  Unità di misura per le distanze utilizzata dagli userDefault formatters.
- *  Quando settata viene salvata negli userDefaults.
+ * Unit for distances used by userDefault formatters.
+ * When set, it is saved in userDefaults.
  *
- *  Il valore di default è " m" locale con sistema metrico e " ft" per quelli con sistema statunitense.
- *  Il locale utilizzato è il selectedLocale o, in mancanza, il [NSLocale currentLocale].
+ * The default value is local "m" with metric and "ft" system for those with the US system.
+ * The locale used is the selectedLocale or, failing [NSLocale currentLocale].
  */
 @property (nonatomic, strong) NSString *userDefaultDistanceUnit;
 
 /**
- *  Unità di misura per le velocità utilizzata dagli userDefault formatters.
- *  Quando settata viene salvata negli userDefaults.
+ * Unit for speeds used by userDefault formatters.
+ * When set, it is saved in userDefaults.
  *
- *  Il valore di default è " km/h" locale con sistema metrico e " mph" per quelli con sistema statunitense.
- *  Il locale utilizzato è il selectedLocale o, in mancanza, il [NSLocale currentLocale].
+ * The default value is the local "km / h" with metric and "mph" system for those with the US system.
+ * The locale used is the selectedLocale or, failing [NSLocale currentLocale].
  */
 @property (nonatomic, strong) NSString *userDefaultSpeedUnit;
 
 /**
- *  Simbolo di valuta utilizzato dagli userDefault formatters.
- *  Quando settato viene salvato negli userDefaults.
+ * Currency symbol used by userDefault formatters.
+ * When set, it is saved in userDefaults.
  *
- *  Il valore di default è quello fornito dal locale associato al formatter.
+ * The default value is that provided by the locale associated with the formatter.
  */
 @property (nonatomic, strong) NSString *userDefaultCurrencySymbol;
 
 /**
- *  Questo formatter formatta le distanze aggiungendo come suffisso il valore di userDefaultDistanceUnit.
+ * This formatter formats distances by adding the value of userDefaultDistanceUnit as suffix.
  *
- *  Di default usa sempre un numero dopo la virgola.
+ * By default, always use a comma-number.
  *
- *  I simboli per il separatore dei decimali e dei gruppi sono quelli definiti dal selectedLocale, o in mancanza, dal [NSLocale currentLocale]. Possono essere sovrascritti usando le chiavi localizzate "LM_decimal_separator" e "LM_grouping_separator".
+ * The symbols for the decimals and groups are those defined by the selectedLocale, or failing, from the [CurrentLocale NSLocale]. They can be overwritten using the localized keys "LM_decimal_separator" and "LM_grouping_separator".
  */
 @property (nonatomic, strong) NSNumberFormatter* userDefaultDistanceFormatter;
 
 /**
- *  Questo formatter formatta le velocità aggiungendo come suffisso il valore di userDefaultSpeedUnit.
+ * This formatter formats the speeds by adding the userDefaultSpeedUnit value as suffix.
  *
- *  Di default usa sempre un numero dopo la virgola.
+ * By default, always use a comma-number.
  *
- *  I simboli per il separatore dei decimali e dei gruppi sono quelli definiti dal selectedLocale, o in mancanza, dal [NSLocale currentLocale]. Possono essere sovrascritti usando le chiavi localizzate "LM_decimal_separator" e "LM_grouping_separator".
+ * The symbols for the decimals and groups are those defined by the selectedLocale, or failing, from the [CurrentLocale NSLocale]. They can be overwritten using the localized keys "LM_decimal_separator" and "LM_grouping_separator".
  */
 @property (nonatomic, strong) NSNumberFormatter* userDefaultSpeedFormatter;
 
 /**
- *  Questo formatter formatta i numeri aggiungendo come suffisso il valore di userDefaultCurrencySymbol.
+ * This formatter formats the numbers by adding the value of userDefaultCurrencySymbol as suffix.
  *
- *  Di default usa sempre due numeri dopo la virgola.
+ * By default, always use two numbers after the comma.
  *
- *  I simboli per il separatore dei decimali e dei gruppi sono quelli definiti dal selectedLocale, o in mancanza, dal [NSLocale currentLocale]. Possono essere sovrascritti usando le chiavi localizzate "LM_decimal_separator" e "LM_grouping_separator".
+ * The symbols for the decimals and groups are those defined by the selectedLocale, or failing, from the [CurrentLocale NSLocale]. They can be overwritten using the localized keys "LM_decimal_separator" and "LM_grouping_separator".
  */
 @property (nonatomic, strong) NSNumberFormatter* userDefaultCurrencyFormatter;
 
 /**
- *  Formatta i numeri in formato percentuale evitando la divisione per 100 che normalmente viene effettuata da
-    NSNumberFormatter di default.
+ * Format the numbers in percent format by avoiding the division by 100 that is normally done by
+ NSNumberFormatter by default.
  */
 @property (nonatomic, strong) NSNumberFormatter* percentageFormatter;
 
 #pragma mark - Calendars
 
 /**
- *  Time zone utilizzata dagli userDefault caledars.
- *  Quando settata viene salvata negli userDefaults.
+ * Time zones used by userDefault caledars.
+ * When set, it is saved in userDefaults.
  *
- *  Il valore di default è quello fornito dal [NSCalendar currentCalendar].
+ * The default value is that provided by [NSCalendar currentCalendar].
  */
 @property (nonatomic, strong) NSTimeZone *userDefaultTimeZone;
 
 /**
- *  Identificativo di calendario utilizzato dagli userDefault caledars.
- *  Quando settato viene salvato negli userDefaults.
+ * Calendar identifier used by userDefault caledars.
+ * When set, it is saved in userDefaults.
  *
- *  Il valore di default è quello fornito dal [NSCalendar currentCalendar].
+ * The default value is that provided by [NSCalendar currentCalendar].
  */
 @property (nonatomic, strong) NSString *userDefaultCalendarIdentifier;
 
 /**
- *  Calendario con le impostazioni degli userDefaults.
+ * Calendar with userDefaults settings.
  *
- *  La time zone è presa da userDefaultTimeZone.
- *  Il calendar identifier è preso da userDefaultCalendarIdentifier.
- *  Il locale del calendario è selectedLocale, o in mancanza, [NSLocale currentLocale].
+ * The time zone is taken by userDefaultTimeZone.
+ * The calendar identifier is taken from userDefaultCalendarIdentifier.
+ * The calendar locale is selectedLocale, or fails, [NSLocale currentLocale].
  */
 @property (nonatomic, strong) NSCalendar *userDefaultCalendar;
 
 /**
- *  Calendario gregoriano con time zone impostata a UTC.
+ * Gregorian calendar with time zones set to UTC.
  */
 @property (nonatomic, strong) NSCalendar* utcCalendar;
 
 /**
- *  Calendario gregoriano con time zone impostata a GMT.
+ * Gregorian calendar with time zones set to GMT.
  */
 @property (nonatomic, strong) NSCalendar* gmtCalendar;
 

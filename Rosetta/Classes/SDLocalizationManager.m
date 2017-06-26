@@ -1,10 +1,16 @@
+// Copyright 2017 Sysdata S.p.A.
 //
-//  SDLocalizationManager.m
-//  SysdataCore
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
 //
-//  Created by Paolo Ardia on 16/11/15.
+// http://www.apache.org/licenses/LICENSE-2.0
 //
-//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 #import "SDLocalizationManager.h"
 
@@ -49,8 +55,9 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
 
 @property (nonatomic, strong) NSMutableOrderedSet *locales; // NSString
 @property (nonatomic, strong) NSMutableDictionary *localizedTables;
+
 /**
- *  Questo locale viene usato solo nel caso in cui il selectedLocale non sia uno standard previsto dal SO e rappresenta l'alternativa standard per localizzazioni e formattazioni.
+ * This locale is only used if the selectedLocale is not a SO standard and is the standard alternative for localization and formatting.
  */
 @property (nonatomic, strong) NSLocale* correspondingStandardLocale;
 
@@ -142,7 +149,7 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         return;
     }
     
-    // verifico se il locale passato è supportato
+    // Verify if the past locale is supported
     NSLocale *locale = [self supportedLocaleWithIdentifier:identifier];
     if (locale)
     {
@@ -156,7 +163,7 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         
         SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"New locale selected: %@", locale.localeIdentifier);
         
-        // se il manager ammette locales non standard e si tratta di un locale non standard chiedo al delegate il corrispettivo standard
+        // If the manager adopts non-standard locales and is a non-standard locale, ask the delegate the standard fee
         self.correspondingStandardLocale = nil;
         if (!self.allowsOnlyLocalesAvailableOnSystem && ![NSLocale isLocaleIdentifierAvailableOnSystem:identifier])
         {
@@ -169,10 +176,10 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         self.localizedTables[kBaseLocaleTablesKey] = [NSMutableDictionary dictionary];
         self.localizedTables[kDefaultLocaleTablesKey] = [NSMutableDictionary dictionary];
         
-        // resetto i formatters
+        // reset formatters
         [self resetFormattersAndCalendars];
 
-        // lancio la notifica
+        // fire the notification
         [[NSNotificationCenter defaultCenter] postNotificationName:SDLocalizationManagerLanguageDidChangeNotification object:locale];
     }
     else
@@ -195,7 +202,7 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
 {
     if ([self.defaultLocale.localeIdentifier isEqualToString:identifier])
     {
-        // il locale non è cambiato
+        // current locale didn't change
         return;
     }
     
@@ -210,7 +217,8 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
     {
         NSString *standardLocale = [self.delegate ISOLocaleIdentifierForNonStandardLocale:identifier];
         self.correspondingStandardLocale = [NSLocale localeWithLocaleIdentifier:standardLocale];
-        // verifico che il locale indicato sia valido e standard
+        
+        // Verify that the indicated locale is valid and standard
         if (![NSLocale isLocaleIdentifierAvailableOnSystem:standardLocale] || !self.correspondingStandardLocale)
         {
             SDLogModuleError(kLocalizationManagerLogModuleName, @"The indicated standard locale (%@) is not valid. Fallback to default", standardLocale);
@@ -252,13 +260,13 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
     
     if (self.locales.count > 0)
     {
-        // se il defaultLocale non è ancora stato impostato dall'esterno
+        // if the defaultLocale has not yet been set from the outside
         if (self.defaultLocale == nil)
         {
-            // imposto il default locale con il primo valore dell'array
+            // set the local default to the first array value
             [self setDefaultLocaleWithIdentifier:self.locales[0]];
         }
-        // altrimenti verifica che il defaultLocale impostato sia supportato, altrimenti lo cambia
+        // otherwise verify that the defaultLocal setting is supported, otherwise it will change
         else if (![self supportsLocaleWithIdentifier:self.defaultLocale.localeIdentifier])
         {
             SDLogModuleError(kLocalizationManagerLogModuleName, @"The current default locale %@ is not supported", self.defaultLocale.localeIdentifier);
@@ -296,13 +304,13 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
 }
 
 /**
- *  Aggiunge il locale passato a quelli supportati facendo le opportune verifiche.
+ * Adds local past to those supported by making the necessary checks.
  *
- *  @param supportedLocale identificativo del locale da aggiungere.
+ * @param supportedLocale locale identifier to be added.
  */
 - (void) addSupportedLocale:(NSString*)supportedLocale
 {
-    // se il manager accetta solo locale riconosciuti dal SO
+    // If the manager accepts only local recognized by the SO
     if (self.allowsOnlyLocalesAvailableOnSystem && ![NSLocale isLocaleIdentifierAvailableOnSystem:supportedLocale])
     {
         SDLogModuleError(kLocalizationManagerLogModuleName, @"The locale you're trying to support is not available on the operative system: %@", supportedLocale);
@@ -311,16 +319,16 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
     
     NSLocale *locale = [NSLocale localeWithLocaleIdentifier:supportedLocale];
     
-    // verifico prima se il locale passato è una lingua valida
-    // in questo modo tutti i supportedLocale non nil sono validi
+    // check first if the past locale is a valid language
+    // so all supportedLocals are not valid
     if (locale.languageCode.length > 0)
     {
-        // se ho già aggiunto un locale per questa lingua
+        // if it is already added a locale for this language
         if ([self.locales containsObject:supportedLocale])
         {
             SDLogModuleWarning(kLocalizationManagerLogModuleName, @"Locale already added to supported locales: %@", supportedLocale);
         }
-        // altrimenti aggiungo il locale
+        // otherwise adds the locale
         else
         {
             [self.locales addObject:supportedLocale];
@@ -333,21 +341,21 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
 }
 
 /**
- *  Sceglie il locale selezionato in fase di inizializzazione in base alla scelta salvata e alle lingue
- *  del sistema operativo.
+ * Selects the selected locale in initialization based on the saved choice and languages
+ * Of the operating system.
  */
 - (void) setupLocalization
 {
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     NSString* preferredLangCode = [userDefaults stringForKey:USER_DEF_LOCALE_KEY];
     
-    // Verifica se è stata salvata un'impostazione negli user defaults
+    // Verify if a user default setting was saved
     if (preferredLangCode.length > 0)
     {
-        // faccio un check per essere sicuro che la lingua scelta sia ancora supportata
+        // I do a check to make sure that the chosen language is still supported
         if (![self supportsLocaleWithIdentifier:preferredLangCode])
         {
-            // se non lo è cancello l'impostazione dagli user defaults e rifaccio il setupLocalization
+            // if it does not delete the setting from the user defaults and refit the setupLocalization
             SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"Saved preferred language is not supported anymore: %@", preferredLangCode);
             [userDefaults removeObjectForKey:USER_DEF_LOCALE_KEY];
             [userDefaults synchronize];
@@ -355,30 +363,31 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         }
         else
         {
-            // altrimenti la salvo come selectedLocale
+            // otherwise save as selectedLocale
             [self setSelectedLocaleWithIdentifier:preferredLangCode];
         }
     }
-    // se non ci sono impostazioni salvate
+    // if there are no saved settings
     else
     {
         NSArray* soLanguages = [NSLocale preferredLanguages];
         
-        // ciclo sulle lingue scelte per il sistema operativo
+        // language loop for the operating system
         for (NSString *soLanguage in soLanguages)
         {
-            // se la lingua è supportata la setto come selectedLocale
+            // if the language is supported the sect as selectedLocale
             if ([self supportsLocaleWithIdentifier:soLanguage])
             {
                 SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"User language supported: %@", soLanguage);
                 [self setSelectedLocaleWithIdentifier:soLanguage persistingSelection:NO];
                 return;
             }
-            // altrimenti verifico se l'app supporta la versione base della lingua
+            // else verifies if the app supports the basic language version
             else
             {
                 NSLocale *locale = [NSLocale localeWithLocaleIdentifier:soLanguage];
-                // se la lingua base è supportata la setto come selectedLocale
+                
+                // if the base language is supported the set as selectedLocale
                 if ([self supportsLocaleWithIdentifier:locale.languageCode])
                 {
                     SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"User language not supported, but is supported his generic version: %@", locale.languageCode);
@@ -388,7 +397,7 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
             }
         }
         
-        // se non ho ancora un selectedLocale allora scelgo il defaultLocale
+        // if I still do not have a selectedLocale then I choose the defaultLocale
         SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"No user's language supported. Default locale selected.");
         [self setSelectedLocaleWithIdentifier:self.defaultLocale.localeIdentifier persistingSelection:NO];
     }
@@ -479,7 +488,7 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         }
         else
         {
-            // se non trovo la localizzazione restituisco la key
+            // if I do not find localization I return the key
             [names addObject:localizedKey];
         }
     }
@@ -523,7 +532,7 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
 
 - (NSString *)localizedKey:(NSString *)key fromTable:(NSString *)tableName withDefaultValue:(NSString *)defaultValue
 {
-    // fallback sulla chiamata standard
+    // fallback on standard call
     if (!self.selectedLocale)
     {
         return [[NSBundle mainBundle] localizedStringForKey:key value:defaultValue table:tableName];
@@ -554,7 +563,7 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"Key not found in table %@ for selected locale: %@", table, key);
     }
     
-    // se non ho trovato nulla cerco nell'eventuale locale di base
+    // if I did not find anything I would look for in any basic locale
     NSString* baseLang = self.ISOSelectedLocale.baseLanguageLocale.languageID;
     if (![baseLang isEqualToString:selectedLang])
     {
@@ -579,7 +588,7 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         }
     }
     
-    // per ultimo provo con il locale di default
+    // last try with the default locale
     NSString* defaultLang = self.defaultLocale.languageID;
     if (defaultLang.length > 0 && ![defaultLang isEqualToString:selectedLang] &&
         ![defaultLang isEqualToString:baseLang])
@@ -605,7 +614,7 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         }
     }
     
-    // non è stata trovata alcuna corrispondenza.
+    // no matches were found.
     if (defaultValue)
     {
         SDLogModuleWarning(kLocalizationManagerLogModuleName, @"No localized value found for given key (%@) in table %@. The default value will be returned: %@", key, table, defaultValue);
@@ -637,16 +646,16 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
 }
 
 /**
- *  Carica da file system la table localizzata con il nome e la localizzazione passati.
+ * Load from the file system the localized table with the name and location past.
  *
- *  @param tableName    la table da caricare.
- *  @param localization la localizzazione nella quale cercare la table.
+ * @param tableName the table to load.
+ * @param localization the localization in which to look for the table.
  *
- *  @return Un NSDictionary con il contenuto della table caricata, oppure nil se la table non è stata trovata.
+ * @return An NSDictionary with the content of the loaded table, or nil if the table was not found.
  */
 - (NSDictionary*) loadLocalizedTableWithName:(NSString*)tableName forLocalization:(NSString*)localization
 {
-    // carico il contenuto della table da file system
+    // load the contents of the table from the file system
     NSString* path = [[NSBundle mainBundle] pathForResource:tableName ofType:@"strings" inDirectory:nil forLocalization:localization];
     if (path)
     {
