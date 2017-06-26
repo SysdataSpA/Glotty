@@ -1,0 +1,18 @@
+PODS:
+  - Rosetta (0.1.0):
+    - Rosetta/Core (= 0.1.0)
+  - Rosetta/Core (0.1.0)
+
+DEPENDENCIES:
+  - Rosetta (from `../`)
+
+EXTERNAL SOURCES:
+  Rosetta:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Rosetta: 3731e91f7993da383bed01a5879d3ada895569d0
+
+PODFILE CHECKSUM: 59b40c13044c072b5239512bf0eb7738b53eb41d
+
+COCOAPODS: 1.2.1

@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E0A8690470A83608FEDAD55B2A8ED4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		0E225D3BF3BBB7519A927BF11E2446BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		307043F97E998BA683B6D5C3988E4BF0 /* SDLocalizationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F5A69545671AE63A4DD47A79B53FEA6 /* SDLocalizationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A292A608A68E21B374C5D26D889F6FE /* SDLocalizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E90BE50731344F3FC76B069D79042 /* SDLocalizationManager.m */; };
+		623A256419755FB4412A3A96D4C51684 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		75CBC35703387E1926A724279351AC06 /* Pods-Rosetta_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9A19EFADF9CBFE8D54739945A0EA5 /* Pods-Rosetta_Tests-dummy.m */; };
+		8C34A7FB6A065D0EFCE68AA54C74EE05 /* Rosetta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E62E3E28BA6680702F5133AC27DD45E /* Rosetta-dummy.m */; };
+		95A05258EE0EE69D351CFF530FA266FF /* NSLocale+RosettaUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E6D7A4E18470326EF40017012C48EC60 /* NSLocale+RosettaUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0C6960806E90E184CCADB42BFC383F0 /* Pods-Rosetta_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8DB1CDB31AE50692E538A28CBDD7955 /* Pods-Rosetta_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD6864479C934D1C0958D58E9A312DDB /* Pods-Rosetta_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D9B6F1215A55204686AF6922236284 /* Pods-Rosetta_Example-dummy.m */; };
+		C0B8760CFC68CF17CBD2CA2BDBF28A12 /* Pods-Rosetta_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 198C4D76EF4C1C22E6D1E2E34090F258 /* Pods-Rosetta_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9D5D1CF38C24B5927D7076CE1E365F0 /* SDLocalizationLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 320BD2AEC7FFDA303CC8C9FC2C9286CE /* SDLocalizationLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3BEBA51361233FD265E3E7F5782DE83 /* Rosetta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D0C09F38A8BF6DE5D861A4AC5EC1BE /* Rosetta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDD3A454E8F91AFEEC7E0DA99823CDE7 /* NSLocale+RosettaUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0C681D0E7B83FF3CBD7AD7B3BC723E /* NSLocale+RosettaUtils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB4D6EFA584BA0CEED7A1D71B7D39F80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D573AA629D41686D5097F9391AD0247;
+			remoteInfo = Rosetta;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		041C895D15E3C74004F54EAFEAA97962 /* Rosetta-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Rosetta-prefix.pch"; sourceTree = "<group>"; };
+		06C507726355FF189F441EEABA376463 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E62E3E28BA6680702F5133AC27DD45E /* Rosetta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Rosetta-dummy.m"; sourceTree = "<group>"; };
+		17BC7A0DF3A78324FEB5BDD030232CE3 /* Pods-Rosetta_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rosetta_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		198C4D76EF4C1C22E6D1E2E34090F258 /* Pods-Rosetta_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rosetta_Example-umbrella.h"; sourceTree = "<group>"; };
+		1B7E90BE50731344F3FC76B069D79042 /* SDLocalizationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SDLocalizationManager.m; sourceTree = "<group>"; };
+		30A9A19EFADF9CBFE8D54739945A0EA5 /* Pods-Rosetta_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rosetta_Tests-dummy.m"; sourceTree = "<group>"; };
+		320BD2AEC7FFDA303CC8C9FC2C9286CE /* SDLocalizationLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SDLocalizationLogger.h; sourceTree = "<group>"; };
+		49FC3344A489D0E31E6499114BAC8BDB /* Pods-Rosetta_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rosetta_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		55D0C09F38A8BF6DE5D861A4AC5EC1BE /* Rosetta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Rosetta-umbrella.h"; sourceTree = "<group>"; };
+		57AB03046AD4CE1C222F4B6A8E581A70 /* Pods-Rosetta_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rosetta_Example.release.xcconfig"; sourceTree = "<group>"; };
+		5BB661A5EC88E5018E76703E03164B4C /* Pods-Rosetta_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rosetta_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5DFF251D9217F8A3058B555246039C27 /* Pods-Rosetta_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Rosetta_Example.modulemap"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6A44D617D7D1342267A607920C7E0E4D /* Pods-Rosetta_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Rosetta_Tests.modulemap"; sourceTree = "<group>"; };
+		873EF9C201D3374F34468336D3A801A1 /* Pods-Rosetta_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rosetta_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		89D9B6F1215A55204686AF6922236284 /* Pods-Rosetta_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rosetta_Example-dummy.m"; sourceTree = "<group>"; };
+		8F5A69545671AE63A4DD47A79B53FEA6 /* SDLocalizationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SDLocalizationManager.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95659FF68797351AB92DCAC1341B0A62 /* Pods_Rosetta_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Rosetta_Tests.framework; path = "Pods-Rosetta_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BEDE0C8932DC69EEACD60A8B1866CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E2167C2E8EF2AA5A8AAE252765C0365 /* Rosetta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Rosetta.xcconfig; sourceTree = "<group>"; };
+		A20766174961BDE892F3D8AAEF4421D9 /* Pods-Rosetta_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rosetta_Example-frameworks.sh"; sourceTree = "<group>"; };
+		AB1222118C92C98FA4AD5DDCB643960F /* Pods-Rosetta_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rosetta_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		AE0C681D0E7B83FF3CBD7AD7B3BC723E /* NSLocale+RosettaUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+RosettaUtils.m"; sourceTree = "<group>"; };
+		AF4B8881EB84756081AE440024E71328 /* Pods-Rosetta_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rosetta_Example-resources.sh"; sourceTree = "<group>"; };
+		B8DB1CDB31AE50692E538A28CBDD7955 /* Pods-Rosetta_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rosetta_Tests-umbrella.h"; sourceTree = "<group>"; };
+		BC7321FE2748BAAB9854D924A5C09C57 /* Pods-Rosetta_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rosetta_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C3F9E5D26008A26672C2CDC75E09C8EC /* Pods-Rosetta_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rosetta_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		CC39E61632540FF0342EC947EAF6734F /* Rosetta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Rosetta.modulemap; sourceTree = "<group>"; };
+		CF131FA22F597146EAD4C62BC47A1DF7 /* Pods-Rosetta_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rosetta_Tests-resources.sh"; sourceTree = "<group>"; };
+		DABDD60505609D4051AAC5765BF806B7 /* Pods_Rosetta_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Rosetta_Example.framework; path = "Pods-Rosetta_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6CEF7C73A37E346D16136925EEA0A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6733DB104B83CD245103B328BCE98DF /* Rosetta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Rosetta.framework; path = Rosetta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6D7A4E18470326EF40017012C48EC60 /* NSLocale+RosettaUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLocale+RosettaUtils.h"; sourceTree = "<group>"; };
+		FED0CC56865504077EAE4C13BF065DC0 /* Pods-Rosetta_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rosetta_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		264BA0F68B18A6E638F7C93867C7A15C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E225D3BF3BBB7519A927BF11E2446BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		312381C742F3C6E3DCF19914647F93D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E0A8690470A83608FEDAD55B2A8ED4B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4532F578E8A9FCFA7A3566DD19B9253 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				623A256419755FB4412A3A96D4C51684 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		088EBFB803527FACF1F62708CA7881FF /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EE19BFD05AE8055CA823BDA56859E09 /* Rosetta */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		1EE19BFD05AE8055CA823BDA56859E09 /* Rosetta */ = {
+			isa = PBXGroup;
+			children = (
+				F7DD7A13D11A3D18DACA58D332637623 /* Core */,
+				D43B8E3CC4DA9B67679ADA95CE8B3262 /* Support Files */,
+			);
+			name = Rosetta;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		1FEF2BC812BEA5B3C39F1A7FCABC7E02 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E6D7A4E18470326EF40017012C48EC60 /* NSLocale+RosettaUtils.h */,
+				AE0C681D0E7B83FF3CBD7AD7B3BC723E /* NSLocale+RosettaUtils.m */,
+			);
+			name = utils;
+			path = utils;
+			sourceTree = "<group>";
+		};
+		6217E310D57852858C4511A56C29EFA7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				320BD2AEC7FFDA303CC8C9FC2C9286CE /* SDLocalizationLogger.h */,
+				8F5A69545671AE63A4DD47A79B53FEA6 /* SDLocalizationManager.h */,
+				1B7E90BE50731344F3FC76B069D79042 /* SDLocalizationManager.m */,
+				1FEF2BC812BEA5B3C39F1A7FCABC7E02 /* utils */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		65A3A3A5E65F4195A11AD8C3FE67CA97 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB3E43238BA36762BCD367DD77053F13 /* Pods-Rosetta_Example */,
+				C9AA2C321748A58F9EE96E8496C8C6BA /* Pods-Rosetta_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7D895A4D73B6BB1CF68E7A2B4D5410A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DABDD60505609D4051AAC5765BF806B7 /* Pods_Rosetta_Example.framework */,
+				95659FF68797351AB92DCAC1341B0A62 /* Pods_Rosetta_Tests.framework */,
+				E6733DB104B83CD245103B328BCE98DF /* Rosetta.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				088EBFB803527FACF1F62708CA7881FF /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				7D895A4D73B6BB1CF68E7A2B4D5410A9 /* Products */,
+				65A3A3A5E65F4195A11AD8C3FE67CA97 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A3D6DC8101CEFC23A424A24150580716 /* Rosetta */ = {
+			isa = PBXGroup;
+			children = (
+				6217E310D57852858C4511A56C29EFA7 /* Classes */,
+			);
+			name = Rosetta;
+			path = Rosetta;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9AA2C321748A58F9EE96E8496C8C6BA /* Pods-Rosetta_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DC6CEF7C73A37E346D16136925EEA0A8 /* Info.plist */,
+				6A44D617D7D1342267A607920C7E0E4D /* Pods-Rosetta_Tests.modulemap */,
+				49FC3344A489D0E31E6499114BAC8BDB /* Pods-Rosetta_Tests-acknowledgements.markdown */,
+				FED0CC56865504077EAE4C13BF065DC0 /* Pods-Rosetta_Tests-acknowledgements.plist */,
+				30A9A19EFADF9CBFE8D54739945A0EA5 /* Pods-Rosetta_Tests-dummy.m */,
+				C3F9E5D26008A26672C2CDC75E09C8EC /* Pods-Rosetta_Tests-frameworks.sh */,
+				CF131FA22F597146EAD4C62BC47A1DF7 /* Pods-Rosetta_Tests-resources.sh */,
+				B8DB1CDB31AE50692E538A28CBDD7955 /* Pods-Rosetta_Tests-umbrella.h */,
+				873EF9C201D3374F34468336D3A801A1 /* Pods-Rosetta_Tests.debug.xcconfig */,
+				17BC7A0DF3A78324FEB5BDD030232CE3 /* Pods-Rosetta_Tests.release.xcconfig */,
+			);
+			name = "Pods-Rosetta_Tests";
+			path = "Target Support Files/Pods-Rosetta_Tests";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D43B8E3CC4DA9B67679ADA95CE8B3262 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				06C507726355FF189F441EEABA376463 /* Info.plist */,
+				CC39E61632540FF0342EC947EAF6734F /* Rosetta.modulemap */,
+				9E2167C2E8EF2AA5A8AAE252765C0365 /* Rosetta.xcconfig */,
+				0E62E3E28BA6680702F5133AC27DD45E /* Rosetta-dummy.m */,
+				041C895D15E3C74004F54EAFEAA97962 /* Rosetta-prefix.pch */,
+				55D0C09F38A8BF6DE5D861A4AC5EC1BE /* Rosetta-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Rosetta";
+			sourceTree = "<group>";
+		};
+		DB3E43238BA36762BCD367DD77053F13 /* Pods-Rosetta_Example */ = {
+			isa = PBXGroup;
+			children = (
+				96BEDE0C8932DC69EEACD60A8B1866CE /* Info.plist */,
+				5DFF251D9217F8A3058B555246039C27 /* Pods-Rosetta_Example.modulemap */,
+				5BB661A5EC88E5018E76703E03164B4C /* Pods-Rosetta_Example-acknowledgements.markdown */,
+				AB1222118C92C98FA4AD5DDCB643960F /* Pods-Rosetta_Example-acknowledgements.plist */,
+				89D9B6F1215A55204686AF6922236284 /* Pods-Rosetta_Example-dummy.m */,
+				A20766174961BDE892F3D8AAEF4421D9 /* Pods-Rosetta_Example-frameworks.sh */,
+				AF4B8881EB84756081AE440024E71328 /* Pods-Rosetta_Example-resources.sh */,
+				198C4D76EF4C1C22E6D1E2E34090F258 /* Pods-Rosetta_Example-umbrella.h */,
+				BC7321FE2748BAAB9854D924A5C09C57 /* Pods-Rosetta_Example.debug.xcconfig */,
+				57AB03046AD4CE1C222F4B6A8E581A70 /* Pods-Rosetta_Example.release.xcconfig */,
+			);
+			name = "Pods-Rosetta_Example";
+			path = "Target Support Files/Pods-Rosetta_Example";
+			sourceTree = "<group>";
+		};
+		F7DD7A13D11A3D18DACA58D332637623 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A3D6DC8101CEFC23A424A24150580716 /* Rosetta */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1B545DC3C7B6FC1311D0EFE8AF28AE00 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A05258EE0EE69D351CFF530FA266FF /* NSLocale+RosettaUtils.h in Headers */,
+				F3BEBA51361233FD265E3E7F5782DE83 /* Rosetta-umbrella.h in Headers */,
+				E9D5D1CF38C24B5927D7076CE1E365F0 /* SDLocalizationLogger.h in Headers */,
+				307043F97E998BA683B6D5C3988E4BF0 /* SDLocalizationManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB13F95479CB516E4A2FC1A13353891 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C6960806E90E184CCADB42BFC383F0 /* Pods-Rosetta_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A27AC494CDA6BDA50FBDABC43525DDA2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B8760CFC68CF17CBD2CA2BDBF28A12 /* Pods-Rosetta_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		29CC96E9FE3A244667146F8A0FE4B6ED /* Pods-Rosetta_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C25EA2C78B7AD57E63374AB38DDA27BE /* Build configuration list for PBXNativeTarget "Pods-Rosetta_Tests" */;
+			buildPhases = (
+				914ABBF91D596A1DAE0FD17E30A3AC58 /* Sources */,
+				312381C742F3C6E3DCF19914647F93D2 /* Frameworks */,
+				8EB13F95479CB516E4A2FC1A13353891 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Rosetta_Tests";
+			productName = "Pods-Rosetta_Tests";
+			productReference = 95659FF68797351AB92DCAC1341B0A62 /* Pods_Rosetta_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3D573AA629D41686D5097F9391AD0247 /* Rosetta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 839B0AE8B8747892950A529EBEEA8ACE /* Build configuration list for PBXNativeTarget "Rosetta" */;
+			buildPhases = (
+				176C21D971A7C9CBB96D6210478B3683 /* Sources */,
+				264BA0F68B18A6E638F7C93867C7A15C /* Frameworks */,
+				1B545DC3C7B6FC1311D0EFE8AF28AE00 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rosetta;
+			productName = Rosetta;
+			productReference = E6733DB104B83CD245103B328BCE98DF /* Rosetta.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		452CF4F669F92FE8FF12AE01A7D3B5E3 /* Pods-Rosetta_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 335D92A8891407A39E6C2293CA72F2F1 /* Build configuration list for PBXNativeTarget "Pods-Rosetta_Example" */;
+			buildPhases = (
+				E7182C4F44911D990147DB7DAA841E99 /* Sources */,
+				E4532F578E8A9FCFA7A3566DD19B9253 /* Frameworks */,
+				A27AC494CDA6BDA50FBDABC43525DDA2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E1FB0C4100180425F9B17F0B154E736 /* PBXTargetDependency */,
+			);
+			name = "Pods-Rosetta_Example";
+			productName = "Pods-Rosetta_Example";
+			productReference = DABDD60505609D4051AAC5765BF806B7 /* Pods_Rosetta_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 7D895A4D73B6BB1CF68E7A2B4D5410A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				452CF4F669F92FE8FF12AE01A7D3B5E3 /* Pods-Rosetta_Example */,
+				29CC96E9FE3A244667146F8A0FE4B6ED /* Pods-Rosetta_Tests */,
+				3D573AA629D41686D5097F9391AD0247 /* Rosetta */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		176C21D971A7C9CBB96D6210478B3683 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDD3A454E8F91AFEEC7E0DA99823CDE7 /* NSLocale+RosettaUtils.m in Sources */,
+				8C34A7FB6A065D0EFCE68AA54C74EE05 /* Rosetta-dummy.m in Sources */,
+				5A292A608A68E21B374C5D26D889F6FE /* SDLocalizationManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		914ABBF91D596A1DAE0FD17E30A3AC58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75CBC35703387E1926A724279351AC06 /* Pods-Rosetta_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7182C4F44911D990147DB7DAA841E99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD6864479C934D1C0958D58E9A312DDB /* Pods-Rosetta_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E1FB0C4100180425F9B17F0B154E736 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Rosetta;
+			target = 3D573AA629D41686D5097F9391AD0247 /* Rosetta */;
+			targetProxy = CB4D6EFA584BA0CEED7A1D71B7D39F80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1B3DEB8E32CED179E9604DAD4DEA82B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E2167C2E8EF2AA5A8AAE252765C0365 /* Rosetta.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Rosetta/Rosetta-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Rosetta/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Rosetta/Rosetta.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Rosetta;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		273A68EA214AE6A2FBF0F220A8641763 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17BC7A0DF3A78324FEB5BDD030232CE3 /* Pods-Rosetta_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Rosetta_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rosetta_Tests/Pods-Rosetta_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Rosetta_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		449A864EDC005E00D9B91A7B3EEF5AF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E2167C2E8EF2AA5A8AAE252765C0365 /* Rosetta.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Rosetta/Rosetta-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Rosetta/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Rosetta/Rosetta.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Rosetta;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2ED706AE66F484D7C5394C3FE85C6DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 873EF9C201D3374F34468336D3A801A1 /* Pods-Rosetta_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Rosetta_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rosetta_Tests/Pods-Rosetta_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Rosetta_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C1AD9414DDB8478F76A7E79F15E3C34D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC7321FE2748BAAB9854D924A5C09C57 /* Pods-Rosetta_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Rosetta_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rosetta_Example/Pods-Rosetta_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Rosetta_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3D151EB4E85964A0F32880A8A621439 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57AB03046AD4CE1C222F4B6A8E581A70 /* Pods-Rosetta_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Rosetta_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rosetta_Example/Pods-Rosetta_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Rosetta_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		335D92A8891407A39E6C2293CA72F2F1 /* Build configuration list for PBXNativeTarget "Pods-Rosetta_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1AD9414DDB8478F76A7E79F15E3C34D /* Debug */,
+				F3D151EB4E85964A0F32880A8A621439 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		839B0AE8B8747892950A529EBEEA8ACE /* Build configuration list for PBXNativeTarget "Rosetta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B3DEB8E32CED179E9604DAD4DEA82B6 /* Debug */,
+				449A864EDC005E00D9B91A7B3EEF5AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C25EA2C78B7AD57E63374AB38DDA27BE /* Build configuration list for PBXNativeTarget "Pods-Rosetta_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2ED706AE66F484D7C5394C3FE85C6DC /* Debug */,
+				273A68EA214AE6A2FBF0F220A8641763 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
