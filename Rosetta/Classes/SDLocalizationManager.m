@@ -13,6 +13,7 @@
 // limitations under the License.
 
 #import "SDLocalizationManager.h"
+#import "RTFileManager.h"
 
 #define USER_DEF_LOCALE_KEY             @"APP_LANGUAGE_SETTING"
 #define USER_DEF_DATE_FORMAT            @"LM_USER_DEF_DATE_FORMAT"
@@ -61,6 +62,8 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
  */
 @property (nonatomic, strong) NSLocale* correspondingStandardLocale;
 
+@property (nonatomic, strong) NSString* pathForDynamicStrings;
+
 @end
 
 @implementation SDLocalizationManager
@@ -98,6 +101,13 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         _selectedLocale = nil;
         _allowsOnlyLocalesAvailableOnSystem = YES;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetTimeZone) name:NSSystemTimeZoneDidChangeNotification object:nil];
+        
+        NSString* path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"Localizations"];
+        if ([RTFileManager createDirectoryAtPath:path withIntermediateDirectories:YES])
+        {
+            self.pathForDynamicStrings = path;
+        }
+        
     }
     return self;
 }
@@ -153,7 +163,7 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
     NSLocale *locale = [self supportedLocaleWithIdentifier:identifier];
     if (locale)
     {
-        // salvo il locale selezionato solo se richiesto
+        // save selected locale only if requested
         _selectedLocale = locale;
         if (persisting)
         {
@@ -163,18 +173,15 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         
         SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"New locale selected: %@", locale.localeIdentifier);
         
-        // If the manager adopts non-standard locales and is a non-standard locale, ask the delegate the standard fee
+        // If the manager adopts no-standard locales and is a no-standard locale, ask the delegate the standard fee
         self.correspondingStandardLocale = nil;
         if (!self.allowsOnlyLocalesAvailableOnSystem && ![NSLocale isLocaleIdentifierAvailableOnSystem:identifier])
         {
             [self setupCorrespondingStandardLocaleFromIdentifier:identifier];
         }
         
-        // reinizializzo la struttura delle label localizzate
-        self.localizedTables = [NSMutableDictionary dictionary];
-        self.localizedTables[kSelectedLocaleTablesKey] = [NSMutableDictionary dictionary];
-        self.localizedTables[kBaseLocaleTablesKey] = [NSMutableDictionary dictionary];
-        self.localizedTables[kDefaultLocaleTablesKey] = [NSMutableDictionary dictionary];
+        // reinit label structure
+        [self resetLocalizedTables];
         
         // reset formatters
         [self resetFormattersAndCalendars];
@@ -186,6 +193,14 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
     {
         SDLogModuleError(kLocalizationManagerLogModuleName, @"The given selected locale (%@) is not supported. The selected locale is %@", identifier, self.selectedLocale.localeIdentifier);
     }
+}
+
+- (void) resetLocalizedTables
+{
+    self.localizedTables = [NSMutableDictionary dictionary];
+    self.localizedTables[kSelectedLocaleTablesKey] = [NSMutableDictionary dictionary];
+    self.localizedTables[kBaseLocaleTablesKey] = [NSMutableDictionary dictionary];
+    self.localizedTables[kDefaultLocaleTablesKey] = [NSMutableDictionary dictionary];
 }
 
 - (void)setSelectedLocaleWithIdentifier:(NSString *)identifier
@@ -530,6 +545,7 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
     return localizedString;
 }
 
+
 - (NSString *)localizedKey:(NSString *)key fromTable:(NSString *)tableName withDefaultValue:(NSString *)defaultValue
 {
     // fallback on standard call
@@ -538,53 +554,30 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         return [[NSBundle mainBundle] localizedStringForKey:key value:defaultValue table:tableName];
     }
     
+    NSString* localizedString;
     NSString* table = [tableName stringByReplacingOccurrencesOfString:@".strings" withString:@""];
     
     // procedendo prima nella struttura in memoria e poi nel file system
     // cerco prima nella lingua selezionata
     NSString* selectedLang = self.ISOSelectedLocale.languageID;
-    NSDictionary *tableContent = self.localizedTables[kSelectedLocaleTablesKey][table];
-    if (!tableContent)
+    if(selectedLang)
     {
-        tableContent = [self loadLocalizedTableWithName:table forLocalization:selectedLang];
-        if (tableContent)
+        localizedString = [self retreiveLocalizedStringForKey:key localesTableKey:kSelectedLocaleTablesKey tableName:table withLocaleIdentifier:selectedLang];
+        if(localizedString)
         {
-            SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"Table with name %@ loaded for selected locale", table);
-            [self.localizedTables[kSelectedLocaleTablesKey] setObject:tableContent forKey:table];
+            return localizedString;
         }
     }
     
-    if (tableContent[key])
-    {
-        return tableContent[key];
-    }
-    else
-    {
-        SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"Key not found in table %@ for selected locale: %@", table, key);
-    }
     
     // if I did not find anything I would look for in any basic locale
     NSString* baseLang = self.ISOSelectedLocale.baseLanguageLocale.languageID;
     if (![baseLang isEqualToString:selectedLang])
     {
-        NSDictionary *tableContent = self.localizedTables[kBaseLocaleTablesKey][table];
-        if (!tableContent)
+        localizedString = [self retreiveLocalizedStringForKey:key localesTableKey:kBaseLocaleTablesKey tableName:table withLocaleIdentifier:baseLang];
+        if(localizedString)
         {
-            tableContent = [self loadLocalizedTableWithName:table forLocalization:baseLang];
-            if (tableContent)
-            {
-                SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"Table with name %@ loaded for generic version of selected locale (%@)", table, baseLang);
-                [self.localizedTables[kBaseLocaleTablesKey] setObject:tableContent forKey:table];
-            }
-        }
-        
-        if (tableContent[key])
-        {
-            return tableContent[key];
-        }
-        else
-        {
-            SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"Key not found in table %@ for generic version of selected locale: %@", table, key);
+            return localizedString;
         }
     }
     
@@ -593,24 +586,10 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
     if (defaultLang.length > 0 && ![defaultLang isEqualToString:selectedLang] &&
         ![defaultLang isEqualToString:baseLang])
     {
-        NSDictionary *tableContent = self.localizedTables[kDefaultLocaleTablesKey][table];
-        if (!tableContent)
+        localizedString = [self retreiveLocalizedStringForKey:key localesTableKey:kDefaultLocaleTablesKey tableName:table withLocaleIdentifier:defaultLang];
+        if(localizedString)
         {
-            tableContent = [self loadLocalizedTableWithName:table forLocalization:defaultLang];
-            if (tableContent)
-            {
-                SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"Table with name %@ loaded for default locale", table);
-                [self.localizedTables[kDefaultLocaleTablesKey] setObject:tableContent forKey:table];
-            }
-        }
-        
-        if (tableContent[key])
-        {
-            return tableContent[key];
-        }
-        else
-        {
-            SDLogModuleWarning(kLocalizationManagerLogModuleName, @"Key not found in table %@ for default locale: %@", table, key);
+            return localizedString;
         }
     }
     
@@ -645,6 +624,37 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
     return [NSArray arrayWithArray:array];
 }
 
+- (NSString*) retreiveLocalizedStringForKey:(NSString*)key localesTableKey:(NSString*)localesTableKey tableName:(NSString*)tableName withLocaleIdentifier:(NSString*)localeIdentifier
+{
+    NSArray* supportedLocaleTableKeys = @[kSelectedLocaleTablesKey, kBaseLocaleTablesKey, kDefaultLocaleTablesKey];
+    if(![supportedLocaleTableKeys containsObject:localesTableKey])
+    {
+        SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"Can't retreive strings for localeTableKey %@", localesTableKey);
+        return nil;
+    }
+    
+    NSDictionary *tableContent = self.localizedTables[localesTableKey][tableName];
+    if (!tableContent)
+    {
+        tableContent = [self loadLocalizedTableWithName:tableName forLocalization:localeIdentifier];
+        if (tableContent)
+        {
+            SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"Table with name %@ loaded for localeTableKey %@", tableName, localesTableKey);
+            [self.localizedTables[localesTableKey] setObject:tableContent forKey:tableName];
+        }
+    }
+    
+    if (tableContent[key])
+    {
+        return tableContent[key];
+    }
+    else
+    {
+        SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"Key not found in table %@ for localeTableKey %@: %@", tableName, localesTableKey, key);
+    }
+    return nil;
+}
+
 /**
  * Load from the file system the localized table with the name and location past.
  *
@@ -655,22 +665,62 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
  */
 - (NSDictionary*) loadLocalizedTableWithName:(NSString*)tableName forLocalization:(NSString*)localization
 {
-    // load the contents of the table from the file system
-    NSString* path = [[NSBundle mainBundle] pathForResource:tableName ofType:@"strings" inDirectory:nil forLocalization:localization];
-    if (path)
+    NSDictionary* staticDictionary;
+    NSDictionary* dynamicDictionary;
+    
+    // load the contents of the table from bundle
+    NSString* bundlePath = [self bundlePathForTable:tableName localization:localization];
+    if (bundlePath)
     {
-        return [NSDictionary dictionaryWithContentsOfFile:path];
+        staticDictionary = [NSDictionary dictionaryWithContentsOfFile:bundlePath];
     }
     else
     {
         SDLogModuleError(kLocalizationManagerLogModuleName, @"Table with name %@ not found in resources for localization %@", tableName, localization);
     }
+    
+    // load the contents of table from file system
+    NSString* fileSystemPath = [self fileSystemPathForTable:tableName localization:localization];
+    dynamicDictionary = [NSDictionary dictionaryWithContentsOfFile:fileSystemPath];
+    
+    if(staticDictionary || dynamicDictionary)
+    {
+        NSMutableDictionary* dictionary = [NSMutableDictionary new];
+        if(staticDictionary)
+        {
+            [dictionary addEntriesFromDictionary:staticDictionary];
+        }
+        if(dynamicDictionary)
+        {
+            [dictionary addEntriesFromDictionary:dynamicDictionary];
+        }
+        return dictionary;
+    }
+    
+
     return nil;
+}
+
+- (NSString*) bundlePathForTable:(NSString*)tableName localization:(NSString*)localization
+{
+    NSString* path = [[NSBundle mainBundle] pathForResource:tableName ofType:@"strings" inDirectory:nil forLocalization:localization];
+    return path;
+}
+
+- (NSString*) fileSystemPathForTable:(NSString*)tableName localization:(NSString*)localization
+{
+    NSString* path = [self.pathForDynamicStrings stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_%@.strings", tableName, localization]];
+    return path;
 }
 
 #pragma mark - Adding strings
 
 - (void) addStrings:(NSDictionary<NSString*, NSString*>*)strings toTableWithName:(NSString*)tableName
+{
+    [self addStrings:strings toTableWithName:tableName forLocalization:self.ISOSelectedLocale.languageID];
+}
+
+- (void) addStrings:(NSDictionary<NSString*, NSString*>*)strings toTableWithName:(NSString*)tableName forLocalization:(NSString*)localization
 {
     // Parameters validation
     if (!strings)
@@ -685,28 +735,24 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         return;
     }
     
-    // Look for the table in memory and eventually create it
-    NSMutableDictionary* selectedLocaleTables = self.localizedTables[kSelectedLocaleTablesKey];
-    if (!selectedLocaleTables)
+    if (localization.length == 0)
     {
-        selectedLocaleTables = [NSMutableDictionary new];
-        self.localizedTables[kSelectedLocaleTablesKey] = selectedLocaleTables;
+        SDLogModuleError(kLocalizationManagerLogModuleName, @"Invalid localization");
+        return;
     }
     
-    NSMutableDictionary* table = [selectedLocaleTables[tableName] mutableCopy];
-    if (!table)
+    NSString* fileSystemPath = [self fileSystemPathForTable:tableName localization:localization];
+    NSMutableDictionary* dynamicDictionary = [NSMutableDictionary dictionaryWithContentsOfFile:fileSystemPath];
+    if(!dynamicDictionary)
     {
-        table = [NSMutableDictionary new];
-        SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"Table %@ not found in memory for localization %@. I create it!", tableName, self.selectedLocale.localeIdentifier);
+        dynamicDictionary = [NSMutableDictionary new];
     }
     
-    // add the entries to the table
-    [table addEntriesFromDictionary:strings];
+    [dynamicDictionary addEntriesFromDictionary:strings];
     
-    // save the table
-    selectedLocaleTables[tableName] = [table copy];
+    [dynamicDictionary writeToFile:fileSystemPath atomically:YES];
     
-    SDLogModuleVerbose(kLocalizationManagerLogModuleName, @"Added %lu strings to table with name %@ for localization %@", (unsigned long)strings.count, tableName, self.selectedLocale.localeIdentifier);
+    [self resetLocalizedTables];
 }
 
 #pragma mark - Formatters & Calendars Management

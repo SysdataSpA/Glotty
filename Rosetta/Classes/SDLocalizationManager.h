@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #import <Foundation/Foundation.h>
-#import "NSLocale+RosettaUtils.h"
+#import "NSLocale+RTUtils.h"
 #import "SDLocalizationLogger.h"
 
 
@@ -288,6 +288,8 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
  * @param tableName Name of the table to which the strings are to be added.
  */
 - (void) addStrings:(NSDictionary<NSString*, NSString*>*)strings toTableWithName:(NSString*)tableName;
+- (void) addStrings:(NSDictionary<NSString*, NSString*>*)strings toTableWithName:(NSString*)tableName forLocalization:(NSString*)localization;
+
 
 #pragma mark - Formatters & Calendars Management
 

@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import "NSLocale+RosettaUtils.h"
+#import "NSLocale+RTUtils.h"
 
-@implementation NSLocale (RosettaUtils)
+@implementation NSLocale (RTUtils)
 
 - (NSLocaleLanguageDirection)lineDirection
 {

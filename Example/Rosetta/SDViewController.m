@@ -20,8 +20,10 @@
     [super viewDidLoad];
 	
     
-    [[SDLocalizationManager sharedManager] setSupportedLocales:@[@"en"]];
-    [[SDLocalizationManager sharedManager] setDefaultLocaleWithIdentifier:@"en"];
+    [[SDLocalizationManager sharedManager] setSupportedLocales:@[@"it_US"]];
+    [[SDLocalizationManager sharedManager] setDefaultLocaleWithIdentifier:@"it_US"];
+    
+//    [[SDLocalizationManager sharedManager] addStrings:@{@"common_ok" : @"ciaone"} toTableWithName:@"Localizable"];
     
 }
 

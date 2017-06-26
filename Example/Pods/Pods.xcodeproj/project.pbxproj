@@ -9,18 +9,20 @@
 /* Begin PBXBuildFile section */
 		0E0A8690470A83608FEDAD55B2A8ED4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		0E225D3BF3BBB7519A927BF11E2446BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		307043F97E998BA683B6D5C3988E4BF0 /* SDLocalizationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F5A69545671AE63A4DD47A79B53FEA6 /* SDLocalizationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A292A608A68E21B374C5D26D889F6FE /* SDLocalizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E90BE50731344F3FC76B069D79042 /* SDLocalizationManager.m */; };
+		13BCEE90D784F4E0D9C81FEEBEF49B8C /* NSLocale+RTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 672C8BC9F5D6C27143578F228F008084 /* NSLocale+RTUtils.m */; };
+		14E55D958531005F1CAB98DA837FD763 /* Rosetta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D0C09F38A8BF6DE5D861A4AC5EC1BE /* Rosetta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		193C3FAAF75F9B2ED6F04C04CA19F97B /* SDLocalizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AF14DCA02E284BCD979EFB3E4DF906 /* SDLocalizationManager.m */; };
+		306581C559E28BAB19608F0A062DC372 /* RTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D163A9AEF6978FBB457462E74902A8DA /* RTFileManager.m */; };
+		3427C79CCB707C954289F19D5F0BB2B8 /* SDLocalizationLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C504B7BBE1773E8234D7D740A6E6B4F /* SDLocalizationLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F398F43D69BEAA62DAA07CDBF38DF3A /* RTFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E047709C78C3D5CAECC48017A968B12D /* RTFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606AF72C655472676B51EBCCE7C5FCD1 /* SDLocalizationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 81398348CB5C91B29B0E38CF62484309 /* SDLocalizationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		623A256419755FB4412A3A96D4C51684 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		75CBC35703387E1926A724279351AC06 /* Pods-Rosetta_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9A19EFADF9CBFE8D54739945A0EA5 /* Pods-Rosetta_Tests-dummy.m */; };
-		8C34A7FB6A065D0EFCE68AA54C74EE05 /* Rosetta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E62E3E28BA6680702F5133AC27DD45E /* Rosetta-dummy.m */; };
-		95A05258EE0EE69D351CFF530FA266FF /* NSLocale+RosettaUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E6D7A4E18470326EF40017012C48EC60 /* NSLocale+RosettaUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A0C6960806E90E184CCADB42BFC383F0 /* Pods-Rosetta_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8DB1CDB31AE50692E538A28CBDD7955 /* Pods-Rosetta_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A19A5C85B00FCC653A2074B02480A89B /* Rosetta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E62E3E28BA6680702F5133AC27DD45E /* Rosetta-dummy.m */; };
+		A6683A4E9D761FFD18F0B5C03BBDFBFF /* NSLocale+RTUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = C100A56E9BEED7273C8C80C170580C72 /* NSLocale+RTUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD6864479C934D1C0958D58E9A312DDB /* Pods-Rosetta_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D9B6F1215A55204686AF6922236284 /* Pods-Rosetta_Example-dummy.m */; };
 		C0B8760CFC68CF17CBD2CA2BDBF28A12 /* Pods-Rosetta_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 198C4D76EF4C1C22E6D1E2E34090F258 /* Pods-Rosetta_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E9D5D1CF38C24B5927D7076CE1E365F0 /* SDLocalizationLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 320BD2AEC7FFDA303CC8C9FC2C9286CE /* SDLocalizationLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3BEBA51361233FD265E3E7F5782DE83 /* Rosetta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D0C09F38A8BF6DE5D861A4AC5EC1BE /* Rosetta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDD3A454E8F91AFEEC7E0DA99823CDE7 /* NSLocale+RosettaUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0C681D0E7B83FF3CBD7AD7B3BC723E /* NSLocale+RosettaUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,36 +41,38 @@
 		0E62E3E28BA6680702F5133AC27DD45E /* Rosetta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Rosetta-dummy.m"; sourceTree = "<group>"; };
 		17BC7A0DF3A78324FEB5BDD030232CE3 /* Pods-Rosetta_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rosetta_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		198C4D76EF4C1C22E6D1E2E34090F258 /* Pods-Rosetta_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rosetta_Example-umbrella.h"; sourceTree = "<group>"; };
-		1B7E90BE50731344F3FC76B069D79042 /* SDLocalizationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SDLocalizationManager.m; sourceTree = "<group>"; };
 		30A9A19EFADF9CBFE8D54739945A0EA5 /* Pods-Rosetta_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rosetta_Tests-dummy.m"; sourceTree = "<group>"; };
-		320BD2AEC7FFDA303CC8C9FC2C9286CE /* SDLocalizationLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SDLocalizationLogger.h; sourceTree = "<group>"; };
 		49FC3344A489D0E31E6499114BAC8BDB /* Pods-Rosetta_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rosetta_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		55D0C09F38A8BF6DE5D861A4AC5EC1BE /* Rosetta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Rosetta-umbrella.h"; sourceTree = "<group>"; };
 		57AB03046AD4CE1C222F4B6A8E581A70 /* Pods-Rosetta_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rosetta_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5BB661A5EC88E5018E76703E03164B4C /* Pods-Rosetta_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rosetta_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5DFF251D9217F8A3058B555246039C27 /* Pods-Rosetta_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Rosetta_Example.modulemap"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		672C8BC9F5D6C27143578F228F008084 /* NSLocale+RTUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+RTUtils.m"; sourceTree = "<group>"; };
 		6A44D617D7D1342267A607920C7E0E4D /* Pods-Rosetta_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Rosetta_Tests.modulemap"; sourceTree = "<group>"; };
+		81398348CB5C91B29B0E38CF62484309 /* SDLocalizationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SDLocalizationManager.h; sourceTree = "<group>"; };
 		873EF9C201D3374F34468336D3A801A1 /* Pods-Rosetta_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rosetta_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		89D9B6F1215A55204686AF6922236284 /* Pods-Rosetta_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rosetta_Example-dummy.m"; sourceTree = "<group>"; };
-		8F5A69545671AE63A4DD47A79B53FEA6 /* SDLocalizationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SDLocalizationManager.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95659FF68797351AB92DCAC1341B0A62 /* Pods_Rosetta_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Rosetta_Tests.framework; path = "Pods-Rosetta_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BEDE0C8932DC69EEACD60A8B1866CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C504B7BBE1773E8234D7D740A6E6B4F /* SDLocalizationLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SDLocalizationLogger.h; sourceTree = "<group>"; };
 		9E2167C2E8EF2AA5A8AAE252765C0365 /* Rosetta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Rosetta.xcconfig; sourceTree = "<group>"; };
 		A20766174961BDE892F3D8AAEF4421D9 /* Pods-Rosetta_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rosetta_Example-frameworks.sh"; sourceTree = "<group>"; };
 		AB1222118C92C98FA4AD5DDCB643960F /* Pods-Rosetta_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rosetta_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		AE0C681D0E7B83FF3CBD7AD7B3BC723E /* NSLocale+RosettaUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+RosettaUtils.m"; sourceTree = "<group>"; };
 		AF4B8881EB84756081AE440024E71328 /* Pods-Rosetta_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rosetta_Example-resources.sh"; sourceTree = "<group>"; };
 		B8DB1CDB31AE50692E538A28CBDD7955 /* Pods-Rosetta_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rosetta_Tests-umbrella.h"; sourceTree = "<group>"; };
 		BC7321FE2748BAAB9854D924A5C09C57 /* Pods-Rosetta_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rosetta_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C100A56E9BEED7273C8C80C170580C72 /* NSLocale+RTUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLocale+RTUtils.h"; sourceTree = "<group>"; };
 		C3F9E5D26008A26672C2CDC75E09C8EC /* Pods-Rosetta_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rosetta_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		C4AF14DCA02E284BCD979EFB3E4DF906 /* SDLocalizationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SDLocalizationManager.m; sourceTree = "<group>"; };
 		CC39E61632540FF0342EC947EAF6734F /* Rosetta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Rosetta.modulemap; sourceTree = "<group>"; };
 		CF131FA22F597146EAD4C62BC47A1DF7 /* Pods-Rosetta_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rosetta_Tests-resources.sh"; sourceTree = "<group>"; };
+		D163A9AEF6978FBB457462E74902A8DA /* RTFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RTFileManager.m; sourceTree = "<group>"; };
 		DABDD60505609D4051AAC5765BF806B7 /* Pods_Rosetta_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Rosetta_Example.framework; path = "Pods-Rosetta_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6CEF7C73A37E346D16136925EEA0A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E047709C78C3D5CAECC48017A968B12D /* RTFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RTFileManager.h; sourceTree = "<group>"; };
 		E6733DB104B83CD245103B328BCE98DF /* Rosetta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Rosetta.framework; path = Rosetta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6D7A4E18470326EF40017012C48EC60 /* NSLocale+RosettaUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLocale+RosettaUtils.h"; sourceTree = "<group>"; };
 		FED0CC56865504077EAE4C13BF065DC0 /* Pods-Rosetta_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rosetta_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,28 +122,6 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		1FEF2BC812BEA5B3C39F1A7FCABC7E02 /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				E6D7A4E18470326EF40017012C48EC60 /* NSLocale+RosettaUtils.h */,
-				AE0C681D0E7B83FF3CBD7AD7B3BC723E /* NSLocale+RosettaUtils.m */,
-			);
-			name = utils;
-			path = utils;
-			sourceTree = "<group>";
-		};
-		6217E310D57852858C4511A56C29EFA7 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				320BD2AEC7FFDA303CC8C9FC2C9286CE /* SDLocalizationLogger.h */,
-				8F5A69545671AE63A4DD47A79B53FEA6 /* SDLocalizationManager.h */,
-				1B7E90BE50731344F3FC76B069D79042 /* SDLocalizationManager.m */,
-				1FEF2BC812BEA5B3C39F1A7FCABC7E02 /* utils */,
-			);
-			name = Classes;
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		65A3A3A5E65F4195A11AD8C3FE67CA97 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +129,18 @@
 				C9AA2C321748A58F9EE96E8496C8C6BA /* Pods-Rosetta_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7C3E988D717FA8DA87B88B503CF2C179 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				C100A56E9BEED7273C8C80C170580C72 /* NSLocale+RTUtils.h */,
+				672C8BC9F5D6C27143578F228F008084 /* NSLocale+RTUtils.m */,
+				E047709C78C3D5CAECC48017A968B12D /* RTFileManager.h */,
+				D163A9AEF6978FBB457462E74902A8DA /* RTFileManager.m */,
+			);
+			name = utils;
+			path = utils;
 			sourceTree = "<group>";
 		};
 		7D895A4D73B6BB1CF68E7A2B4D5410A9 /* Products */ = {
@@ -173,10 +167,22 @@
 		A3D6DC8101CEFC23A424A24150580716 /* Rosetta */ = {
 			isa = PBXGroup;
 			children = (
-				6217E310D57852858C4511A56C29EFA7 /* Classes */,
+				A4C8A73BE9AD74B8E59A24B331B5C124 /* Classes */,
 			);
 			name = Rosetta;
 			path = Rosetta;
+			sourceTree = "<group>";
+		};
+		A4C8A73BE9AD74B8E59A24B331B5C124 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9C504B7BBE1773E8234D7D740A6E6B4F /* SDLocalizationLogger.h */,
+				81398348CB5C91B29B0E38CF62484309 /* SDLocalizationManager.h */,
+				C4AF14DCA02E284BCD979EFB3E4DF906 /* SDLocalizationManager.m */,
+				7C3E988D717FA8DA87B88B503CF2C179 /* utils */,
+			);
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -256,17 +262,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1B545DC3C7B6FC1311D0EFE8AF28AE00 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				95A05258EE0EE69D351CFF530FA266FF /* NSLocale+RosettaUtils.h in Headers */,
-				F3BEBA51361233FD265E3E7F5782DE83 /* Rosetta-umbrella.h in Headers */,
-				E9D5D1CF38C24B5927D7076CE1E365F0 /* SDLocalizationLogger.h in Headers */,
-				307043F97E998BA683B6D5C3988E4BF0 /* SDLocalizationManager.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8EB13F95479CB516E4A2FC1A13353891 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +275,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B8760CFC68CF17CBD2CA2BDBF28A12 /* Pods-Rosetta_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF05595D4673D8D1CA235F080F12D561 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6683A4E9D761FFD18F0B5C03BBDFBFF /* NSLocale+RTUtils.h in Headers */,
+				14E55D958531005F1CAB98DA837FD763 /* Rosetta-umbrella.h in Headers */,
+				3F398F43D69BEAA62DAA07CDBF38DF3A /* RTFileManager.h in Headers */,
+				3427C79CCB707C954289F19D5F0BB2B8 /* SDLocalizationLogger.h in Headers */,
+				606AF72C655472676B51EBCCE7C5FCD1 /* SDLocalizationManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,9 +314,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 839B0AE8B8747892950A529EBEEA8ACE /* Build configuration list for PBXNativeTarget "Rosetta" */;
 			buildPhases = (
-				176C21D971A7C9CBB96D6210478B3683 /* Sources */,
+				303A4741321491366D65030B3037103C /* Sources */,
 				264BA0F68B18A6E638F7C93867C7A15C /* Frameworks */,
-				1B545DC3C7B6FC1311D0EFE8AF28AE00 /* Headers */,
+				CF05595D4673D8D1CA235F080F12D561 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -367,13 +374,14 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		176C21D971A7C9CBB96D6210478B3683 /* Sources */ = {
+		303A4741321491366D65030B3037103C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD3A454E8F91AFEEC7E0DA99823CDE7 /* NSLocale+RosettaUtils.m in Sources */,
-				8C34A7FB6A065D0EFCE68AA54C74EE05 /* Rosetta-dummy.m in Sources */,
-				5A292A608A68E21B374C5D26D889F6FE /* SDLocalizationManager.m in Sources */,
+				13BCEE90D784F4E0D9C81FEEBEF49B8C /* NSLocale+RTUtils.m in Sources */,
+				A19A5C85B00FCC653A2074B02480A89B /* Rosetta-dummy.m in Sources */,
+				306581C559E28BAB19608F0A062DC372 /* RTFileManager.m in Sources */,
+				193C3FAAF75F9B2ED6F04C04CA19F97B /* SDLocalizationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

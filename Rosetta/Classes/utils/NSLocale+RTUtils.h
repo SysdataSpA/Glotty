@@ -14,7 +14,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSLocale (RosettaUtils)
+@interface NSLocale (RTUtils)
 
 - (NSLocaleLanguageDirection) lineDirection;
 - (NSLocaleLanguageDirection) characterDirection;

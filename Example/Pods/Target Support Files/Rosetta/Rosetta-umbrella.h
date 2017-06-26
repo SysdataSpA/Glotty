@@ -12,7 +12,8 @@
 
 #import "SDLocalizationLogger.h"
 #import "SDLocalizationManager.h"
-#import "NSLocale+RosettaUtils.h"
+#import "NSLocale+RTUtils.h"
+#import "RTFileManager.h"
 
 FOUNDATION_EXPORT double RosettaVersionNumber;
 FOUNDATION_EXPORT const unsigned char RosettaVersionString[];
