@@ -43,6 +43,10 @@ NSString* SDLocalizedStringFromTableWithDefault(NSString * key,NSString *table, 
 
 NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString*, NSString*>* placeholders);
 
+UIImage* SDLocalizedImage(NSString * key);
+UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type);
+
+
 @protocol SDLocalizationManagerDelegate <NSObject>
 @optional
 /**

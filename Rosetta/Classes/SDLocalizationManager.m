@@ -52,6 +52,45 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
     return [[SDLocalizationManager sharedManager] localizedKey:key fromTable:@"Localizable" placeholderDictionary:placeholders withDefaultValue:nil];
 }
 
+UIImage* SDLocalizedImage(NSString * key)
+{
+    UIImage *image = SDLocalizedImageWithNameAndExtension(key, @"png");
+    
+    if (!image)
+    {
+        image =  SDLocalizedImageWithNameAndExtension(key, @"jpg");
+    }
+    if (!image)
+    {
+        image =  SDLocalizedImageWithNameAndExtension(key, @"jpeg");
+    }
+    if (!image)
+    {
+        image =  SDLocalizedImageWithNameAndExtension(key, nil);
+    }
+    return image;
+}
+
+
+
+UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type)
+{
+    UIImage *image;
+    
+    NSString *imagePath = [[NSBundle mainBundle] pathForResource:key ofType:type inDirectory:nil forLocalization:[SDLocalizationManager sharedManager].selectedLocale.localeIdentifier];
+    if (!imagePath)
+    {
+        SDLogError(@"Path image nil for key: %@ and type: %@", key, type);
+        
+    }else
+    {
+        image = [UIImage imageWithContentsOfFile:imagePath];
+    }
+    return image;
+}
+
+
+
 @interface SDLocalizationManager ()
 
 @property (nonatomic, strong) NSMutableOrderedSet *locales; // NSString

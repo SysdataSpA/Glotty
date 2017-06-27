@@ -92,7 +92,7 @@ Typically in *AppDelegate*:
 [[SDLocalizationManager sharedManager] setAllowsOnlyLocalesAvailableOnSystem: NO];
 
 [[SDLocalizationManager sharedManager] setSupportedLocales: @ [@ "en",
-@ "En_US", @ "it", @ "locale_invento"];
+@ "en-US", @ "it", @ "invented-locale"];
 
 [[SDLocalizationManager sharedManager] setDefaultLocaleWithIdentifier: @ "it"];
 ```
