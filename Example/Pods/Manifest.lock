@@ -1,18 +1,23 @@
 PODS:
-  - Rosetta (0.1.0):
-    - Rosetta/Core (= 0.1.0)
+  - Blabber (1.1.3):
+    - Blabber/Core (= 1.1.3)
+  - Blabber/Core (1.1.3)
+  - Rosetta/Blabber (0.1.0):
+    - Blabber
+    - Rosetta/Core
   - Rosetta/Core (0.1.0)
 
 DEPENDENCIES:
-  - Rosetta (from `../`)
+  - Rosetta/Blabber (from `../`)
 
 EXTERNAL SOURCES:
   Rosetta:
     :path: ../
 
 SPEC CHECKSUMS:
+  Blabber: 669f61f7d0a17ed412cb798c1056bb2cc5e88579
   Rosetta: 3731e91f7993da383bed01a5879d3ada895569d0
 
-PODFILE CHECKSUM: 59b40c13044c072b5239512bf0eb7738b53eb41d
+PODFILE CHECKSUM: fd2f27cffcdc0a25b412c237200eb61528a44b21
 
 COCOAPODS: 1.2.1
