@@ -7,7 +7,7 @@
 //
 
 #import "SDViewController.h"
-#import <Rosetta/SDLocalizationManager.h>
+#import <Glotty/SDLocalizationManager.h>
 
 
 #define SUPPORTED_LOCALES @[@"en", @"it", @"zh-Hant"]

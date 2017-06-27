@@ -1,9 +1,9 @@
-# Rosetta
+# Glotty
 
-[![CI Status](http://img.shields.io/travis/francescoceravolo/Rosetta.svg?style=flat)](https://travis-ci.org/francescoceravolo/Rosetta)
-[![Version](https://img.shields.io/cocoapods/v/Rosetta.svg?style=flat)](http://cocoapods.org/pods/Rosetta)
-[![License](https://img.shields.io/cocoapods/l/Rosetta.svg?style=flat)](http://cocoapods.org/pods/Rosetta)
-[![Platform](https://img.shields.io/cocoapods/p/Rosetta.svg?style=flat)](http://cocoapods.org/pods/Rosetta)
+[![CI Status](http://img.shields.io/travis/francescoceravolo/Glotty.svg?style=flat)](https://travis-ci.org/francescoceravolo/Glotty)
+[![Version](https://img.shields.io/cocoapods/v/Glotty.svg?style=flat)](http://cocoapods.org/pods/Glotty)
+[![License](https://img.shields.io/cocoapods/l/Glotty.svg?style=flat)](http://cocoapods.org/pods/Glotty)
+[![Platform](https://img.shields.io/cocoapods/p/Glotty.svg?style=flat)](http://cocoapods.org/pods/Glotty)
 
 ## Example
 
@@ -13,17 +13,17 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-Rosetta is available through [CocoaPods](http://cocoapods.org). To install
+Glotty is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "Rosetta"
+pod "Glotty"
 ```
 
 
 ## License
 
-Rosetta is available under the Apache license. See the LICENSE file for more info.
+Glotty is available under the Apache license. See the LICENSE file for more info.
 
 ## Introduction
 

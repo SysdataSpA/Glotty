@@ -1,0 +1,6 @@
+framework module Pods_Glotty_Example {
+  umbrella header "Pods-Glotty_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

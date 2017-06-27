@@ -1,0 +1,6 @@
+framework module Glotty {
+  umbrella header "Glotty-umbrella.h"
+
+  export *
+  module * { export * }
+}

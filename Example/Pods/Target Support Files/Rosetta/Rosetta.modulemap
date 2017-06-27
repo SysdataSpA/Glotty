@@ -1,6 +1,0 @@
-framework module Rosetta {
-  umbrella header "Rosetta-umbrella.h"
-
-  export *
-  module * { export * }
-}

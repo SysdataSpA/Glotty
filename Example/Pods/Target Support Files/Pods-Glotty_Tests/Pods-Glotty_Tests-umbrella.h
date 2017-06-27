@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Rosetta_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Rosetta_ExampleVersionString[];
+FOUNDATION_EXPORT double Pods_Glotty_TestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Glotty_TestsVersionString[];
 

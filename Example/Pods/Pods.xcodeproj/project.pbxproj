@@ -7,120 +7,112 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		044E82F22F98C32BE780BB0D7ECC402E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */; };
-		06CB1C91FB4710A9144C3826342897B6 /* Pods-Rosetta_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D9B6F1215A55204686AF6922236284 /* Pods-Rosetta_Example-dummy.m */; };
-		0E0A8690470A83608FEDAD55B2A8ED4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */; };
-		199D419876FFA55DF4B745048BA416AD /* RTFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E047709C78C3D5CAECC48017A968B12D /* RTFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01A75CA209400EDA874B939297ABA413 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */; };
+		091FC0E14C0C30CA5DFFEF550066079D /* RTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4594DA9EDF4878A568D9783CFFAAD9C /* RTFileManager.m */; };
 		1B8EC47C4DD20F22E8DFAB8C1427DA09 /* SDLogger+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2823AC29388B56535531F9974B63E7A /* SDLogger+Additions.swift */; };
+		1C209A50EB28D76772FD9C963CC1C20B /* Glotty-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89645E71D944CE0CDF7958434FEBCA7D /* Glotty-dummy.m */; };
 		2CA44343AEADC2F3D89A8897C816CA1B /* SDLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9A92FCFAD29B5734C814F6F80F28 /* SDLogger.m */; };
 		3196F7BA1885C3536815890325D7685D /* SDLogModules.h in Headers */ = {isa = PBXBuildFile; fileRef = 237EDE6CAC2A4D23F9FC1C4A026F15F1 /* SDLogModules.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35F9FB09B229290B3A95782D47FAA031 /* Blabber-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C0EF5C84A5A12912D220C66AAB06F /* Blabber-dummy.m */; };
-		365982F6C78BD46CEFCEA9710B89346E /* SDLocalizationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 81398348CB5C91B29B0E38CF62484309 /* SDLocalizationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38F0503323459AD52F5BAED0DA75E870 /* SDLocalizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AF14DCA02E284BCD979EFB3E4DF906 /* SDLocalizationManager.m */; };
-		45C7913575641A11B14F340711D92CEC /* SDLocalizationLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C504B7BBE1773E8234D7D740A6E6B4F /* SDLocalizationLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4639D9D1CDDA01384B6817D5A288906D /* Rosetta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D0C09F38A8BF6DE5D861A4AC5EC1BE /* Rosetta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43C32DCD9C74CF91FF23B0CC16BE6A53 /* SDLocalizationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B4E19DCCAC0F8CB9CC3EB1AC5A3C3056 /* SDLocalizationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4767639A5DC1A6B8EE616AA673C2D10F /* NSLocale+RTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6A2A6387A9CA5958215CF166D3045 /* NSLocale+RTUtils.m */; };
 		4AFFB24B194F595B512D2425195052BF /* SDLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = DB6B4CF19F2837769DB5352AE19556C8 /* SDLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D669E960659E0767AAF80E8C5832CF6 /* SDLocalizationLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BC7A1F4FA75EB155924AB9EE7A57B41 /* SDLocalizationLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DDAC9AEE40A0222EE8102388FAE89F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */; };
-		702DFDC4C746690D9105163CAD9A60DB /* NSLocale+RTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 672C8BC9F5D6C27143578F228F008084 /* NSLocale+RTUtils.m */; };
-		70DC929CFE7FE36422F959192087ABD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */; };
-		75CBC35703387E1926A724279351AC06 /* Pods-Rosetta_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9A19EFADF9CBFE8D54739945A0EA5 /* Pods-Rosetta_Tests-dummy.m */; };
-		95D74E8765DC72B5EEE5D1F3548AD1AD /* Blabber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B9A4251A01B6487A38AFCB459091C9 /* Blabber.framework */; };
-		975A8FA4A48DAE06EFED84877770B2EE /* NSLocale+RTUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = C100A56E9BEED7273C8C80C170580C72 /* NSLocale+RTUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9E879688E52FAE734C59E9E9996C6BE5 /* Pods-Rosetta_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 198C4D76EF4C1C22E6D1E2E34090F258 /* Pods-Rosetta_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A0C6960806E90E184CCADB42BFC383F0 /* Pods-Rosetta_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8DB1CDB31AE50692E538A28CBDD7955 /* Pods-Rosetta_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53E9056DA7F1FD15F7CE51BC93C7954B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */; };
+		5ABAE20D5D2BD6852247C100E9767BB0 /* RTFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 18EC7B0BBDB3076AB25B7A56AE4BA25A /* RTFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EB924DB49DF33AEEC365D30EB354161 /* Blabber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B9A4251A01B6487A38AFCB459091C9 /* Blabber.framework */; };
+		628EBB48629D706F87A4602DC53C7B2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */; };
+		64BF94308F0FF5BB74EB3E36111477DA /* NSLocale+RTUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D63F6A54CB25F52B5E1B9C648E6838 /* NSLocale+RTUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A1D2D91EE56AD37CB0C40ACCE3B5458 /* Glotty-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA55ACA257C57F0298F09331E75DC7D2 /* Glotty-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CCAE9BD41C5D201EC4EC21339683F8D /* Pods-Glotty_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84439B2106C05B155E3D965B86872D34 /* Pods-Glotty_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CA468676CE7A512B8B7179D0068DF31 /* Pods-Glotty_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54E09B795D474D0083BF897B67F580A1 /* Pods-Glotty_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A135F56119487851BD2D518ECC0F3B44 /* Pods-Glotty_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEAD2CDA481A3BF8112E36E05ECB7B4 /* Pods-Glotty_Example-dummy.m */; };
+		A5F119BA2C556AD2B2719E0E7C893E3B /* SDLocalizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69131201E531FDC4D86F98BFF4E6A19A /* SDLocalizationManager.m */; };
+		A9BF9F00D6748A167432CB46F2AFFDD5 /* Pods-Glotty_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0037F4D906F9A7029AB81DF4BDB19BEE /* Pods-Glotty_Tests-dummy.m */; };
 		D0AFBC6EEB8DF006ED471FE6A522569A /* SysdataCoreDev-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0EC7B21671691C63B6846762062F53 /* SysdataCoreDev-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFD5F72A65B6CB9FD9D60306573F40C5 /* Blabber-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C31FAE9E2A575B096B5FC53FAD2760C /* Blabber-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EAD0B6F1EC89DEAB120019EBFF597B2E /* Rosetta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E62E3E28BA6680702F5133AC27DD45E /* Rosetta-dummy.m */; };
-		F40015B6794633E0A9C3BF2FDCD1AF38 /* RTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D163A9AEF6978FBB457462E74902A8DA /* RTFileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0AB796C416CFAAA73160414EE2B7DF4B /* PBXContainerItemProxy */ = {
+		20353C438BDB24E28E918E026F28DEE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B60D07460B5610B431AD2E1CC260C5EC;
+			remoteInfo = Glotty;
+		};
+		4ABE74A284AD1950468FEB96A49B46C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4D15E9BDBD6AEEAA3366ECA54B7A51B0;
 			remoteInfo = Blabber;
 		};
-		28FA869E45BE2734596410FA762F139E /* PBXContainerItemProxy */ = {
+		A0A81F7EDE39AF4DC9CD3FE1C1072550 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4D15E9BDBD6AEEAA3366ECA54B7A51B0;
 			remoteInfo = Blabber;
-		};
-		840CD0471CE47D03BF566DB2190F7AC8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 068AAC676BF95B65FFDC92B0C4935C95;
-			remoteInfo = Rosetta;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		041C895D15E3C74004F54EAFEAA97962 /* Rosetta-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Rosetta-prefix.pch"; sourceTree = "<group>"; };
-		06C507726355FF189F441EEABA376463 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E62E3E28BA6680702F5133AC27DD45E /* Rosetta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Rosetta-dummy.m"; sourceTree = "<group>"; };
-		15B56FA6670A6EB86B711480193EFC57 /* Blabber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Blabber.framework; path = Blabber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0037F4D906F9A7029AB81DF4BDB19BEE /* Pods-Glotty_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Glotty_Tests-dummy.m"; sourceTree = "<group>"; };
+		0D8C49C6576B33C942C5D652251DF326 /* Pods-Glotty_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Glotty_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		0DC6E6A7380B05C217D5180BA5EEC82F /* Pods-Glotty_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Glotty_Tests-resources.sh"; sourceTree = "<group>"; };
 		163B05E292EFB4219175D9010B0FA8FB /* Blabber.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Blabber.modulemap; sourceTree = "<group>"; };
-		17BC7A0DF3A78324FEB5BDD030232CE3 /* Pods-Rosetta_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rosetta_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		17ECC3D1A97F5C9F971FB76BD0445380 /* Rosetta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Rosetta.framework; path = Rosetta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		198C4D76EF4C1C22E6D1E2E34090F258 /* Pods-Rosetta_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rosetta_Example-umbrella.h"; sourceTree = "<group>"; };
+		18EC7B0BBDB3076AB25B7A56AE4BA25A /* RTFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RTFileManager.h; sourceTree = "<group>"; };
+		1C115984D93B61127108F834F366F62E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C7C0D3CBA2719D52B072269748C8685 /* Pods-Glotty_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Glotty_Example-frameworks.sh"; sourceTree = "<group>"; };
 		1F4C0EF5C84A5A12912D220C66AAB06F /* Blabber-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Blabber-dummy.m"; sourceTree = "<group>"; };
+		1FEAD2CDA481A3BF8112E36E05ECB7B4 /* Pods-Glotty_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Glotty_Example-dummy.m"; sourceTree = "<group>"; };
 		237EDE6CAC2A4D23F9FC1C4A026F15F1 /* SDLogModules.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDLogModules.h; path = "Blabber/Classes/Base/obj-c/SDLogModules.h"; sourceTree = "<group>"; };
-		2C18E9BE3A51C55EBF553D753D9DF5DA /* Pods_Rosetta_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Rosetta_Tests.framework; path = "Pods-Rosetta_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		30A9A19EFADF9CBFE8D54739945A0EA5 /* Pods-Rosetta_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rosetta_Tests-dummy.m"; sourceTree = "<group>"; };
+		3B97854E168A474E624A3E55538F8591 /* Pods-Glotty_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Glotty_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3BC7A1F4FA75EB155924AB9EE7A57B41 /* SDLocalizationLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SDLocalizationLogger.h; sourceTree = "<group>"; };
+		3C288F2918149A70A1CD2A6E2D239585 /* Blabber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Blabber.framework; path = Blabber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C31FAE9E2A575B096B5FC53FAD2760C /* Blabber-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Blabber-umbrella.h"; sourceTree = "<group>"; };
-		49FC3344A489D0E31E6499114BAC8BDB /* Pods-Rosetta_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rosetta_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		411221621A534A6BDDD05ACAF9093E46 /* Pods-Glotty_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Glotty_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		44B7A85233318B7EE0A042C169EE7F7E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		481DE1AB92088AE03B3F1EFB9C7F305B /* Pods-Glotty_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Glotty_Example.release.xcconfig"; sourceTree = "<group>"; };
+		50D63F6A54CB25F52B5E1B9C648E6838 /* NSLocale+RTUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLocale+RTUtils.h"; sourceTree = "<group>"; };
 		53DC9A92FCFAD29B5734C814F6F80F28 /* SDLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDLogger.m; path = "Blabber/Classes/Base/obj-c/SDLogger.m"; sourceTree = "<group>"; };
-		55D0C09F38A8BF6DE5D861A4AC5EC1BE /* Rosetta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Rosetta-umbrella.h"; sourceTree = "<group>"; };
-		57AB03046AD4CE1C222F4B6A8E581A70 /* Pods-Rosetta_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rosetta_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5BB661A5EC88E5018E76703E03164B4C /* Pods-Rosetta_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rosetta_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5DFF251D9217F8A3058B555246039C27 /* Pods-Rosetta_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Rosetta_Example.modulemap"; sourceTree = "<group>"; };
-		672C8BC9F5D6C27143578F228F008084 /* NSLocale+RTUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+RTUtils.m"; sourceTree = "<group>"; };
-		6A44D617D7D1342267A607920C7E0E4D /* Pods-Rosetta_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Rosetta_Tests.modulemap"; sourceTree = "<group>"; };
+		54E09B795D474D0083BF897B67F580A1 /* Pods-Glotty_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Glotty_Example-umbrella.h"; sourceTree = "<group>"; };
+		5E8CA163300E2C9320678397BDDD5E43 /* Pods-Glotty_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Glotty_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		63EE5E8CC754BDA0D4BF10304999BCFF /* Glotty.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Glotty.xcconfig; sourceTree = "<group>"; };
+		69131201E531FDC4D86F98BFF4E6A19A /* SDLocalizationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SDLocalizationManager.m; sourceTree = "<group>"; };
+		6F3589F5E14B3880870DFF1CAE70644C /* Pods_Glotty_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Glotty_Example.framework; path = "Pods-Glotty_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		775B6DC0A4FB794919CDF2D6C23E18BD /* Pods_Glotty_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Glotty_Tests.framework; path = "Pods-Glotty_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C8FA252FE5221E98ABAF7812AEAE74 /* Blabber.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Blabber.xcconfig; sourceTree = "<group>"; };
-		81398348CB5C91B29B0E38CF62484309 /* SDLocalizationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SDLocalizationManager.h; sourceTree = "<group>"; };
-		873EF9C201D3374F34468336D3A801A1 /* Pods-Rosetta_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rosetta_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		89D9B6F1215A55204686AF6922236284 /* Pods-Rosetta_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rosetta_Example-dummy.m"; sourceTree = "<group>"; };
+		7C2DFAAA71CA691E4700D26EFA57C8CE /* Pods-Glotty_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Glotty_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		7FB620527D08C483F977526000931433 /* Glotty-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Glotty-prefix.pch"; sourceTree = "<group>"; };
+		832383F6019E38353DA99DCED0B723F5 /* Pods-Glotty_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Glotty_Tests.modulemap"; sourceTree = "<group>"; };
+		84439B2106C05B155E3D965B86872D34 /* Pods-Glotty_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Glotty_Tests-umbrella.h"; sourceTree = "<group>"; };
+		8552F0757EAE5B69C55AD3CB8EBD47C1 /* Pods-Glotty_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Glotty_Example-resources.sh"; sourceTree = "<group>"; };
+		89645E71D944CE0CDF7958434FEBCA7D /* Glotty-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Glotty-dummy.m"; sourceTree = "<group>"; };
+		90919B93E671E1FBF131F96753819426 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96BEDE0C8932DC69EEACD60A8B1866CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C504B7BBE1773E8234D7D740A6E6B4F /* SDLocalizationLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SDLocalizationLogger.h; sourceTree = "<group>"; };
-		9E2167C2E8EF2AA5A8AAE252765C0365 /* Rosetta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Rosetta.xcconfig; sourceTree = "<group>"; };
-		A20766174961BDE892F3D8AAEF4421D9 /* Pods-Rosetta_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rosetta_Example-frameworks.sh"; sourceTree = "<group>"; };
+		9BAD4119E74DEDD38DFDB932E0FFCFB8 /* Glotty.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Glotty.modulemap; sourceTree = "<group>"; };
+		9D1591EEDE3FD3E055A87111FA93FC80 /* Pods-Glotty_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Glotty_Example.modulemap"; sourceTree = "<group>"; };
+		9DE53E7197EFED59543CA155005652C6 /* Pods-Glotty_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Glotty_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		A2823AC29388B56535531F9974B63E7A /* SDLogger+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SDLogger+Additions.swift"; path = "Blabber/Classes/Base/swift/SDLogger+Additions.swift"; sourceTree = "<group>"; };
+		A347AFE0C796FC98CCF4861D97CE2166 /* Pods-Glotty_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Glotty_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A6B9A4251A01B6487A38AFCB459091C9 /* Blabber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Blabber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB1222118C92C98FA4AD5DDCB643960F /* Pods-Rosetta_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rosetta_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		AF4B8881EB84756081AE440024E71328 /* Pods-Rosetta_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rosetta_Example-resources.sh"; sourceTree = "<group>"; };
-		B8DB1CDB31AE50692E538A28CBDD7955 /* Pods-Rosetta_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rosetta_Tests-umbrella.h"; sourceTree = "<group>"; };
-		BC7321FE2748BAAB9854D924A5C09C57 /* Pods-Rosetta_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rosetta_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C100A56E9BEED7273C8C80C170580C72 /* NSLocale+RTUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLocale+RTUtils.h"; sourceTree = "<group>"; };
-		C2378275C4258DD8A5BF700308F60359 /* Pods_Rosetta_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Rosetta_Example.framework; path = "Pods-Rosetta_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3F9E5D26008A26672C2CDC75E09C8EC /* Pods-Rosetta_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rosetta_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		C4AF14DCA02E284BCD979EFB3E4DF906 /* SDLocalizationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SDLocalizationManager.m; sourceTree = "<group>"; };
-		CC39E61632540FF0342EC947EAF6734F /* Rosetta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Rosetta.modulemap; sourceTree = "<group>"; };
+		A94F54267438CCEC099BC1BFA4D005C2 /* Glotty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Glotty.framework; path = Glotty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E19DCCAC0F8CB9CC3EB1AC5A3C3056 /* SDLocalizationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SDLocalizationManager.h; sourceTree = "<group>"; };
+		CAB6A2A6387A9CA5958215CF166D3045 /* NSLocale+RTUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+RTUtils.m"; sourceTree = "<group>"; };
+		CC3D49C6874B7D0AAA7E3227FEB6ACD4 /* Pods-Glotty_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Glotty_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD0EC7B21671691C63B6846762062F53 /* SysdataCoreDev-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SysdataCoreDev-Bridging-Header.h"; path = "Blabber/Classes/Base/swift/SysdataCoreDev-Bridging-Header.h"; sourceTree = "<group>"; };
-		CF131FA22F597146EAD4C62BC47A1DF7 /* Pods-Rosetta_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rosetta_Tests-resources.sh"; sourceTree = "<group>"; };
 		D01A43792D3E57FD74E474E690616114 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D163A9AEF6978FBB457462E74902A8DA /* RTFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RTFileManager.m; sourceTree = "<group>"; };
+		DA55ACA257C57F0298F09331E75DC7D2 /* Glotty-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Glotty-umbrella.h"; sourceTree = "<group>"; };
 		DB6B4CF19F2837769DB5352AE19556C8 /* SDLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDLogger.h; path = "Blabber/Classes/Base/obj-c/SDLogger.h"; sourceTree = "<group>"; };
-		DC6CEF7C73A37E346D16136925EEA0A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E047709C78C3D5CAECC48017A968B12D /* RTFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RTFileManager.h; sourceTree = "<group>"; };
 		E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F1B55225C270EA4C027F85055E84E99B /* Blabber-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Blabber-prefix.pch"; sourceTree = "<group>"; };
-		FED0CC56865504077EAE4C13BF065DC0 /* Pods-Rosetta_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rosetta_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F4594DA9EDF4878A568D9783CFFAAD9C /* RTFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RTFileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		312381C742F3C6E3DCF19914647F93D2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0E0A8690470A83608FEDAD55B2A8ED4B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		369407694411A7C3613FCCE06FA7884B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,86 +121,105 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41C4F01407B182208114C7CA5DC4F5F8 /* Frameworks */ = {
+		4DBA52A56138A81194B28FC5B51DC7E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70DC929CFE7FE36422F959192087ABD9 /* Foundation.framework in Frameworks */,
+				01A75CA209400EDA874B939297ABA413 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		69A1EE2773DB425DFB75540F8CD99A37 /* Frameworks */ = {
+		66DA52DB3AF3C67F6E2DC6A6F2C4B64E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D74E8765DC72B5EEE5D1F3548AD1AD /* Blabber.framework in Frameworks */,
-				044E82F22F98C32BE780BB0D7ECC402E /* Foundation.framework in Frameworks */,
+				5EB924DB49DF33AEEC365D30EB354161 /* Blabber.framework in Frameworks */,
+				628EBB48629D706F87A4602DC53C7B2C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C49309594D9D37D3B36900BB3C4D8E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53E9056DA7F1FD15F7CE51BC93C7954B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		088EBFB803527FACF1F62708CA7881FF /* Development Pods */ = {
+		1EBE7A2F1FF277B5CFA0594650C7FF6F /* Pods-Glotty_Example */ = {
 			isa = PBXGroup;
 			children = (
-				1EE19BFD05AE8055CA823BDA56859E09 /* Rosetta */,
+				1C115984D93B61127108F834F366F62E /* Info.plist */,
+				9D1591EEDE3FD3E055A87111FA93FC80 /* Pods-Glotty_Example.modulemap */,
+				3B97854E168A474E624A3E55538F8591 /* Pods-Glotty_Example-acknowledgements.markdown */,
+				7C2DFAAA71CA691E4700D26EFA57C8CE /* Pods-Glotty_Example-acknowledgements.plist */,
+				1FEAD2CDA481A3BF8112E36E05ECB7B4 /* Pods-Glotty_Example-dummy.m */,
+				1C7C0D3CBA2719D52B072269748C8685 /* Pods-Glotty_Example-frameworks.sh */,
+				8552F0757EAE5B69C55AD3CB8EBD47C1 /* Pods-Glotty_Example-resources.sh */,
+				54E09B795D474D0083BF897B67F580A1 /* Pods-Glotty_Example-umbrella.h */,
+				0D8C49C6576B33C942C5D652251DF326 /* Pods-Glotty_Example.debug.xcconfig */,
+				481DE1AB92088AE03B3F1EFB9C7F305B /* Pods-Glotty_Example.release.xcconfig */,
 			);
-			name = "Development Pods";
+			name = "Pods-Glotty_Example";
+			path = "Target Support Files/Pods-Glotty_Example";
 			sourceTree = "<group>";
 		};
-		1EE19BFD05AE8055CA823BDA56859E09 /* Rosetta */ = {
+		27633AC62FA72D49814A9900AF91CA33 /* Glotty */ = {
 			isa = PBXGroup;
 			children = (
-				F7DD7A13D11A3D18DACA58D332637623 /* Core */,
-				D43B8E3CC4DA9B67679ADA95CE8B3262 /* Support Files */,
+				A32545F8D9AFB4DD05F04058DB45F752 /* Core */,
+				445752CCEB1F40220BBBD02BEA8D7381 /* Support Files */,
 			);
-			name = Rosetta;
+			name = Glotty;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		5150D6458351D8B3FBACD1D76B69A666 /* Products */ = {
+		445752CCEB1F40220BBBD02BEA8D7381 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				15B56FA6670A6EB86B711480193EFC57 /* Blabber.framework */,
-				C2378275C4258DD8A5BF700308F60359 /* Pods_Rosetta_Example.framework */,
-				2C18E9BE3A51C55EBF553D753D9DF5DA /* Pods_Rosetta_Tests.framework */,
-				17ECC3D1A97F5C9F971FB76BD0445380 /* Rosetta.framework */,
+				9BAD4119E74DEDD38DFDB932E0FFCFB8 /* Glotty.modulemap */,
+				63EE5E8CC754BDA0D4BF10304999BCFF /* Glotty.xcconfig */,
+				89645E71D944CE0CDF7958434FEBCA7D /* Glotty-dummy.m */,
+				7FB620527D08C483F977526000931433 /* Glotty-prefix.pch */,
+				DA55ACA257C57F0298F09331E75DC7D2 /* Glotty-umbrella.h */,
+				90919B93E671E1FBF131F96753819426 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Glotty";
+			sourceTree = "<group>";
+		};
+		75574E1103439217A57B81CB86F26893 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C288F2918149A70A1CD2A6E2D239585 /* Blabber.framework */,
+				A94F54267438CCEC099BC1BFA4D005C2 /* Glotty.framework */,
+				6F3589F5E14B3880870DFF1CAE70644C /* Pods_Glotty_Example.framework */,
+				775B6DC0A4FB794919CDF2D6C23E18BD /* Pods_Glotty_Tests.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		65A3A3A5E65F4195A11AD8C3FE67CA97 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DB3E43238BA36762BCD367DD77053F13 /* Pods-Rosetta_Example */,
-				C9AA2C321748A58F9EE96E8496C8C6BA /* Pods-Rosetta_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7C3E988D717FA8DA87B88B503CF2C179 /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				C100A56E9BEED7273C8C80C170580C72 /* NSLocale+RTUtils.h */,
-				672C8BC9F5D6C27143578F228F008084 /* NSLocale+RTUtils.m */,
-				E047709C78C3D5CAECC48017A968B12D /* RTFileManager.h */,
-				D163A9AEF6978FBB457462E74902A8DA /* RTFileManager.m */,
-			);
-			name = utils;
-			path = utils;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				088EBFB803527FACF1F62708CA7881FF /* Development Pods */,
+				8A8ACD80639293A2F911C28F662849D6 /* Development Pods */,
 				915A12CAA73CA78253175A686540892A /* Frameworks */,
 				A06DD9DE1CFC442A5316AD01CEE504DF /* Pods */,
-				5150D6458351D8B3FBACD1D76B69A666 /* Products */,
-				65A3A3A5E65F4195A11AD8C3FE67CA97 /* Targets Support Files */,
+				75574E1103439217A57B81CB86F26893 /* Products */,
+				A238D8A9B42ECC2506F3B53AA04320CA /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8A8ACD80639293A2F911C28F662849D6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27633AC62FA72D49814A9900AF91CA33 /* Glotty */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		915A12CAA73CA78253175A686540892A /* Frameworks */ = {
@@ -242,57 +253,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A3D6DC8101CEFC23A424A24150580716 /* Rosetta */ = {
+		A238D8A9B42ECC2506F3B53AA04320CA /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A4C8A73BE9AD74B8E59A24B331B5C124 /* Classes */,
+				1EBE7A2F1FF277B5CFA0594650C7FF6F /* Pods-Glotty_Example */,
+				F8F82C2D6C1B2A4AF8A0ED1009A2A409 /* Pods-Glotty_Tests */,
 			);
-			name = Rosetta;
-			path = Rosetta;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A4C8A73BE9AD74B8E59A24B331B5C124 /* Classes */ = {
+		A32545F8D9AFB4DD05F04058DB45F752 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				9C504B7BBE1773E8234D7D740A6E6B4F /* SDLocalizationLogger.h */,
-				81398348CB5C91B29B0E38CF62484309 /* SDLocalizationManager.h */,
-				C4AF14DCA02E284BCD979EFB3E4DF906 /* SDLocalizationManager.m */,
-				7C3E988D717FA8DA87B88B503CF2C179 /* utils */,
+				AB46D966517A65056CFFFD5A81D7E9C0 /* Glotty */,
 			);
-			name = Classes;
-			path = Classes;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		C9AA2C321748A58F9EE96E8496C8C6BA /* Pods-Rosetta_Tests */ = {
+		AB46D966517A65056CFFFD5A81D7E9C0 /* Glotty */ = {
 			isa = PBXGroup;
 			children = (
-				DC6CEF7C73A37E346D16136925EEA0A8 /* Info.plist */,
-				6A44D617D7D1342267A607920C7E0E4D /* Pods-Rosetta_Tests.modulemap */,
-				49FC3344A489D0E31E6499114BAC8BDB /* Pods-Rosetta_Tests-acknowledgements.markdown */,
-				FED0CC56865504077EAE4C13BF065DC0 /* Pods-Rosetta_Tests-acknowledgements.plist */,
-				30A9A19EFADF9CBFE8D54739945A0EA5 /* Pods-Rosetta_Tests-dummy.m */,
-				C3F9E5D26008A26672C2CDC75E09C8EC /* Pods-Rosetta_Tests-frameworks.sh */,
-				CF131FA22F597146EAD4C62BC47A1DF7 /* Pods-Rosetta_Tests-resources.sh */,
-				B8DB1CDB31AE50692E538A28CBDD7955 /* Pods-Rosetta_Tests-umbrella.h */,
-				873EF9C201D3374F34468336D3A801A1 /* Pods-Rosetta_Tests.debug.xcconfig */,
-				17BC7A0DF3A78324FEB5BDD030232CE3 /* Pods-Rosetta_Tests.release.xcconfig */,
+				F8E6004B8C15F60E14A7D38E1DD8BAEF /* Classes */,
 			);
-			name = "Pods-Rosetta_Tests";
-			path = "Target Support Files/Pods-Rosetta_Tests";
-			sourceTree = "<group>";
-		};
-		D43B8E3CC4DA9B67679ADA95CE8B3262 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				06C507726355FF189F441EEABA376463 /* Info.plist */,
-				CC39E61632540FF0342EC947EAF6734F /* Rosetta.modulemap */,
-				9E2167C2E8EF2AA5A8AAE252765C0365 /* Rosetta.xcconfig */,
-				0E62E3E28BA6680702F5133AC27DD45E /* Rosetta-dummy.m */,
-				041C895D15E3C74004F54EAFEAA97962 /* Rosetta-prefix.pch */,
-				55D0C09F38A8BF6DE5D861A4AC5EC1BE /* Rosetta-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Rosetta";
+			name = Glotty;
+			path = Glotty;
 			sourceTree = "<group>";
 		};
 		D8BDEE9059BD2F2B4F3642757F81E38C /* Core */ = {
@@ -315,30 +299,46 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		DB3E43238BA36762BCD367DD77053F13 /* Pods-Rosetta_Example */ = {
+		D9CEC35138B9B7806F749D148348B853 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				96BEDE0C8932DC69EEACD60A8B1866CE /* Info.plist */,
-				5DFF251D9217F8A3058B555246039C27 /* Pods-Rosetta_Example.modulemap */,
-				5BB661A5EC88E5018E76703E03164B4C /* Pods-Rosetta_Example-acknowledgements.markdown */,
-				AB1222118C92C98FA4AD5DDCB643960F /* Pods-Rosetta_Example-acknowledgements.plist */,
-				89D9B6F1215A55204686AF6922236284 /* Pods-Rosetta_Example-dummy.m */,
-				A20766174961BDE892F3D8AAEF4421D9 /* Pods-Rosetta_Example-frameworks.sh */,
-				AF4B8881EB84756081AE440024E71328 /* Pods-Rosetta_Example-resources.sh */,
-				198C4D76EF4C1C22E6D1E2E34090F258 /* Pods-Rosetta_Example-umbrella.h */,
-				BC7321FE2748BAAB9854D924A5C09C57 /* Pods-Rosetta_Example.debug.xcconfig */,
-				57AB03046AD4CE1C222F4B6A8E581A70 /* Pods-Rosetta_Example.release.xcconfig */,
+				50D63F6A54CB25F52B5E1B9C648E6838 /* NSLocale+RTUtils.h */,
+				CAB6A2A6387A9CA5958215CF166D3045 /* NSLocale+RTUtils.m */,
+				18EC7B0BBDB3076AB25B7A56AE4BA25A /* RTFileManager.h */,
+				F4594DA9EDF4878A568D9783CFFAAD9C /* RTFileManager.m */,
 			);
-			name = "Pods-Rosetta_Example";
-			path = "Target Support Files/Pods-Rosetta_Example";
+			name = utils;
+			path = utils;
 			sourceTree = "<group>";
 		};
-		F7DD7A13D11A3D18DACA58D332637623 /* Core */ = {
+		F8E6004B8C15F60E14A7D38E1DD8BAEF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A3D6DC8101CEFC23A424A24150580716 /* Rosetta */,
+				3BC7A1F4FA75EB155924AB9EE7A57B41 /* SDLocalizationLogger.h */,
+				B4E19DCCAC0F8CB9CC3EB1AC5A3C3056 /* SDLocalizationManager.h */,
+				69131201E531FDC4D86F98BFF4E6A19A /* SDLocalizationManager.m */,
+				D9CEC35138B9B7806F749D148348B853 /* utils */,
 			);
-			name = Core;
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F8F82C2D6C1B2A4AF8A0ED1009A2A409 /* Pods-Glotty_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				44B7A85233318B7EE0A042C169EE7F7E /* Info.plist */,
+				832383F6019E38353DA99DCED0B723F5 /* Pods-Glotty_Tests.modulemap */,
+				5E8CA163300E2C9320678397BDDD5E43 /* Pods-Glotty_Tests-acknowledgements.markdown */,
+				411221621A534A6BDDD05ACAF9093E46 /* Pods-Glotty_Tests-acknowledgements.plist */,
+				0037F4D906F9A7029AB81DF4BDB19BEE /* Pods-Glotty_Tests-dummy.m */,
+				9DE53E7197EFED59543CA155005652C6 /* Pods-Glotty_Tests-frameworks.sh */,
+				0DC6E6A7380B05C217D5180BA5EEC82F /* Pods-Glotty_Tests-resources.sh */,
+				84439B2106C05B155E3D965B86872D34 /* Pods-Glotty_Tests-umbrella.h */,
+				CC3D49C6874B7D0AAA7E3227FEB6ACD4 /* Pods-Glotty_Tests.debug.xcconfig */,
+				A347AFE0C796FC98CCF4861D97CE2166 /* Pods-Glotty_Tests.release.xcconfig */,
+			);
+			name = "Pods-Glotty_Tests";
+			path = "Target Support Files/Pods-Glotty_Tests";
 			sourceTree = "<group>";
 		};
 		F9DBF42F57800AAC85AA94AE17FBD368 /* Blabber */ = {
@@ -354,31 +354,31 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5717AEABF6312AFC125658848F05007F /* Headers */ = {
+		1FA815DA3AD17FCE01A635AF6BBB20EC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E879688E52FAE734C59E9E9996C6BE5 /* Pods-Rosetta_Example-umbrella.h in Headers */,
+				7CCAE9BD41C5D201EC4EC21339683F8D /* Pods-Glotty_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89242ABD751DF50E014C46FFA14665A0 /* Headers */ = {
+		A7D6910218BA823A5B1EE3FBA7CFAE6C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				975A8FA4A48DAE06EFED84877770B2EE /* NSLocale+RTUtils.h in Headers */,
-				4639D9D1CDDA01384B6817D5A288906D /* Rosetta-umbrella.h in Headers */,
-				199D419876FFA55DF4B745048BA416AD /* RTFileManager.h in Headers */,
-				45C7913575641A11B14F340711D92CEC /* SDLocalizationLogger.h in Headers */,
-				365982F6C78BD46CEFCEA9710B89346E /* SDLocalizationManager.h in Headers */,
+				8CA468676CE7A512B8B7179D0068DF31 /* Pods-Glotty_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EB13F95479CB516E4A2FC1A13353891 /* Headers */ = {
+		C27056912610F7A66CF28715F69C5654 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0C6960806E90E184CCADB42BFC383F0 /* Pods-Rosetta_Tests-umbrella.h in Headers */,
+				6A1D2D91EE56AD37CB0C40ACCE3B5458 /* Glotty-umbrella.h in Headers */,
+				64BF94308F0FF5BB74EB3E36111477DA /* NSLocale+RTUtils.h in Headers */,
+				5ABAE20D5D2BD6852247C100E9767BB0 /* RTFileManager.h in Headers */,
+				4D669E960659E0767AAF80E8C5832CF6 /* SDLocalizationLogger.h in Headers */,
+				43C32DCD9C74CF91FF23B0CC16BE6A53 /* SDLocalizationManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,60 +396,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		068AAC676BF95B65FFDC92B0C4935C95 /* Rosetta */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D177948D6EC1F24BD16941944153CAF1 /* Build configuration list for PBXNativeTarget "Rosetta" */;
-			buildPhases = (
-				38BD3D5F899A4300FDA311BA09D1AC91 /* Sources */,
-				69A1EE2773DB425DFB75540F8CD99A37 /* Frameworks */,
-				89242ABD751DF50E014C46FFA14665A0 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D758D72CAB214414F339D148A3930451 /* PBXTargetDependency */,
-			);
-			name = Rosetta;
-			productName = Rosetta;
-			productReference = 17ECC3D1A97F5C9F971FB76BD0445380 /* Rosetta.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		29CC96E9FE3A244667146F8A0FE4B6ED /* Pods-Rosetta_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C25EA2C78B7AD57E63374AB38DDA27BE /* Build configuration list for PBXNativeTarget "Pods-Rosetta_Tests" */;
-			buildPhases = (
-				914ABBF91D596A1DAE0FD17E30A3AC58 /* Sources */,
-				312381C742F3C6E3DCF19914647F93D2 /* Frameworks */,
-				8EB13F95479CB516E4A2FC1A13353891 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-Rosetta_Tests";
-			productName = "Pods-Rosetta_Tests";
-			productReference = 2C18E9BE3A51C55EBF553D753D9DF5DA /* Pods_Rosetta_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		2CA891909D4EAAD781CD868D04D219F5 /* Pods-Rosetta_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E4214489287A0D5ACA5A3E3CB6ED5711 /* Build configuration list for PBXNativeTarget "Pods-Rosetta_Example" */;
-			buildPhases = (
-				522F91443F9FBA9711188F9573C61DB6 /* Sources */,
-				41C4F01407B182208114C7CA5DC4F5F8 /* Frameworks */,
-				5717AEABF6312AFC125658848F05007F /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B66E364C4B9A6DA0EDFB912886CB48BA /* PBXTargetDependency */,
-				0D531C244C3D90EA73CE8E0CF0FE821F /* PBXTargetDependency */,
-			);
-			name = "Pods-Rosetta_Example";
-			productName = "Pods-Rosetta_Example";
-			productReference = C2378275C4258DD8A5BF700308F60359 /* Pods_Rosetta_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		4D15E9BDBD6AEEAA3366ECA54B7A51B0 /* Blabber */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E26B306AD2AEC77D8323B69F5525AB0 /* Build configuration list for PBXNativeTarget "Blabber" */;
@@ -464,7 +410,61 @@
 			);
 			name = Blabber;
 			productName = Blabber;
-			productReference = 15B56FA6670A6EB86B711480193EFC57 /* Blabber.framework */;
+			productReference = 3C288F2918149A70A1CD2A6E2D239585 /* Blabber.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5A16C0283C764B537CB3A07B033F796F /* Pods-Glotty_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75E083F8A73E79EA6DEA9F91D51F30B7 /* Build configuration list for PBXNativeTarget "Pods-Glotty_Example" */;
+			buildPhases = (
+				34C4584BE58E80D97B64CE01481813D5 /* Sources */,
+				4DBA52A56138A81194B28FC5B51DC7E4 /* Frameworks */,
+				A7D6910218BA823A5B1EE3FBA7CFAE6C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				145F2A695C4B16429A69DC86E828A5C4 /* PBXTargetDependency */,
+				933A40676E220CEF076F8C9F470D62B9 /* PBXTargetDependency */,
+			);
+			name = "Pods-Glotty_Example";
+			productName = "Pods-Glotty_Example";
+			productReference = 6F3589F5E14B3880870DFF1CAE70644C /* Pods_Glotty_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6EDCF2E0B4F143CF97E4AAC4F290B2E7 /* Pods-Glotty_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F79CC1664A7E84A06B9EA4D92CC73AC /* Build configuration list for PBXNativeTarget "Pods-Glotty_Tests" */;
+			buildPhases = (
+				1F0C9B9C02A5E48912D0595BCD4BA32F /* Sources */,
+				C49309594D9D37D3B36900BB3C4D8E07 /* Frameworks */,
+				1FA815DA3AD17FCE01A635AF6BBB20EC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Glotty_Tests";
+			productName = "Pods-Glotty_Tests";
+			productReference = 775B6DC0A4FB794919CDF2D6C23E18BD /* Pods_Glotty_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B60D07460B5610B431AD2E1CC260C5EC /* Glotty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DABE1E9762FC0A6DD373CC647613F024 /* Build configuration list for PBXNativeTarget "Glotty" */;
+			buildPhases = (
+				7C31075641E043D23AB551BB21D8C892 /* Sources */,
+				66DA52DB3AF3C67F6E2DC6A6F2C4B64E /* Frameworks */,
+				C27056912610F7A66CF28715F69C5654 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DBEAC1395FE4EA256227B5A9D174F7C /* PBXTargetDependency */,
+			);
+			name = Glotty;
+			productName = Glotty;
+			productReference = A94F54267438CCEC099BC1BFA4D005C2 /* Glotty.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -484,43 +484,43 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 5150D6458351D8B3FBACD1D76B69A666 /* Products */;
+			productRefGroup = 75574E1103439217A57B81CB86F26893 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4D15E9BDBD6AEEAA3366ECA54B7A51B0 /* Blabber */,
-				2CA891909D4EAAD781CD868D04D219F5 /* Pods-Rosetta_Example */,
-				29CC96E9FE3A244667146F8A0FE4B6ED /* Pods-Rosetta_Tests */,
-				068AAC676BF95B65FFDC92B0C4935C95 /* Rosetta */,
+				B60D07460B5610B431AD2E1CC260C5EC /* Glotty */,
+				5A16C0283C764B537CB3A07B033F796F /* Pods-Glotty_Example */,
+				6EDCF2E0B4F143CF97E4AAC4F290B2E7 /* Pods-Glotty_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		38BD3D5F899A4300FDA311BA09D1AC91 /* Sources */ = {
+		1F0C9B9C02A5E48912D0595BCD4BA32F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				702DFDC4C746690D9105163CAD9A60DB /* NSLocale+RTUtils.m in Sources */,
-				EAD0B6F1EC89DEAB120019EBFF597B2E /* Rosetta-dummy.m in Sources */,
-				F40015B6794633E0A9C3BF2FDCD1AF38 /* RTFileManager.m in Sources */,
-				38F0503323459AD52F5BAED0DA75E870 /* SDLocalizationManager.m in Sources */,
+				A9BF9F00D6748A167432CB46F2AFFDD5 /* Pods-Glotty_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		522F91443F9FBA9711188F9573C61DB6 /* Sources */ = {
+		34C4584BE58E80D97B64CE01481813D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06CB1C91FB4710A9144C3826342897B6 /* Pods-Rosetta_Example-dummy.m in Sources */,
+				A135F56119487851BD2D518ECC0F3B44 /* Pods-Glotty_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		914ABBF91D596A1DAE0FD17E30A3AC58 /* Sources */ = {
+		7C31075641E043D23AB551BB21D8C892 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75CBC35703387E1926A724279351AC06 /* Pods-Rosetta_Tests-dummy.m in Sources */,
+				1C209A50EB28D76772FD9C963CC1C20B /* Glotty-dummy.m in Sources */,
+				4767639A5DC1A6B8EE616AA673C2D10F /* NSLocale+RTUtils.m in Sources */,
+				091FC0E14C0C30CA5DFFEF550066079D /* RTFileManager.m in Sources */,
+				A5F119BA2C556AD2B2719E0E7C893E3B /* SDLocalizationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,30 +537,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0D531C244C3D90EA73CE8E0CF0FE821F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Rosetta;
-			target = 068AAC676BF95B65FFDC92B0C4935C95 /* Rosetta */;
-			targetProxy = 840CD0471CE47D03BF566DB2190F7AC8 /* PBXContainerItemProxy */;
-		};
-		B66E364C4B9A6DA0EDFB912886CB48BA /* PBXTargetDependency */ = {
+		145F2A695C4B16429A69DC86E828A5C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Blabber;
 			target = 4D15E9BDBD6AEEAA3366ECA54B7A51B0 /* Blabber */;
-			targetProxy = 0AB796C416CFAAA73160414EE2B7DF4B /* PBXContainerItemProxy */;
+			targetProxy = A0A81F7EDE39AF4DC9CD3FE1C1072550 /* PBXContainerItemProxy */;
 		};
-		D758D72CAB214414F339D148A3930451 /* PBXTargetDependency */ = {
+		2DBEAC1395FE4EA256227B5A9D174F7C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Blabber;
 			target = 4D15E9BDBD6AEEAA3366ECA54B7A51B0 /* Blabber */;
-			targetProxy = 28FA869E45BE2734596410FA762F139E /* PBXContainerItemProxy */;
+			targetProxy = 4ABE74A284AD1950468FEB96A49B46C4 /* PBXContainerItemProxy */;
+		};
+		933A40676E220CEF076F8C9F470D62B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Glotty;
+			target = B60D07460B5610B431AD2E1CC260C5EC /* Glotty */;
+			targetProxy = 20353C438BDB24E28E918E026F28DEE6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		273A68EA214AE6A2FBF0F220A8641763 /* Release */ = {
+		1DF34DBBFD2C267C82D2A7FBF557D6F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17BC7A0DF3A78324FEB5BDD030232CE3 /* Pods-Rosetta_Tests.release.xcconfig */;
+			baseConfigurationReference = 63EE5E8CC754BDA0D4BF10304999BCFF /* Glotty.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -574,50 +574,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Rosetta_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Rosetta_Tests/Pods-Rosetta_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Rosetta_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		32A15CFA0987E8F8638DB5574B8733CF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E2167C2E8EF2AA5A8AAE252765C0365 /* Rosetta.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Rosetta/Rosetta-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Rosetta/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Glotty/Glotty-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Glotty/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Rosetta/Rosetta.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Glotty/Glotty.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Rosetta;
+				PRODUCT_NAME = Glotty;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -674,6 +638,81 @@
 			};
 			name = Debug;
 		};
+		452BE0BE12264AB3746CD9A3ECB90321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D8C49C6576B33C942C5D652251DF326 /* Pods-Glotty_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Glotty_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Glotty_Example/Pods-Glotty_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Glotty_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		60E2D61F97C908CF957D5B6FF991B05A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A347AFE0C796FC98CCF4861D97CE2166 /* Pods-Glotty_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Glotty_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Glotty_Tests/Pods-Glotty_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Glotty_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -718,43 +757,73 @@
 			};
 			name = Release;
 		};
-		8D062AAEDAACAACB7F6C047F9D62EC5A /* Release */ = {
+		783458E57F41FF730687A127FE66C4AF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57AB03046AD4CE1C222F4B6A8E581A70 /* Pods-Rosetta_Example.release.xcconfig */;
+			baseConfigurationReference = 63EE5E8CC754BDA0D4BF10304999BCFF /* Glotty.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Rosetta_Example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Glotty/Glotty-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Glotty/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Rosetta_Example/Pods-Rosetta_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Rosetta_Example;
+				MODULEMAP_FILE = "Target Support Files/Glotty/Glotty.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Glotty;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		9C32544A14904BE946F762EBDA5E5B43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC3D49C6874B7D0AAA7E3227FEB6ACD4 /* Pods-Glotty_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Glotty_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Glotty_Tests/Pods-Glotty_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Glotty_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		AB3EA07DF10F5A0D7112308E52693952 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -791,112 +860,43 @@
 			};
 			name = Debug;
 		};
-		AC24064C2616B1014FAB7BE54BC33805 /* Debug */ = {
+		BBD644262C30038DF9D1115C2D3A0B1C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC7321FE2748BAAB9854D924A5C09C57 /* Pods-Rosetta_Example.debug.xcconfig */;
+			baseConfigurationReference = 481DE1AB92088AE03B3F1EFB9C7F305B /* Pods-Glotty_Example.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Rosetta_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Glotty_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Rosetta_Example/Pods-Rosetta_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MODULEMAP_FILE = "Target Support Files/Pods-Glotty_Example/Pods-Glotty_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Rosetta_Example;
+				PRODUCT_NAME = Pods_Glotty_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
-		};
-		B2ED706AE66F484D7C5394C3FE85C6DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 873EF9C201D3374F34468336D3A801A1 /* Pods-Rosetta_Tests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Rosetta_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Rosetta_Tests/Pods-Rosetta_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Rosetta_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D7C25B27565401D1DDE2AA1D5E7F080D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E2167C2E8EF2AA5A8AAE252765C0365 /* Rosetta.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Rosetta/Rosetta-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Rosetta/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Rosetta/Rosetta.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Rosetta;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
+			name = Release;
 		};
 		EFC645949D98EA1330D160A9612BCCB4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -944,6 +944,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6F79CC1664A7E84A06B9EA4D92CC73AC /* Build configuration list for PBXNativeTarget "Pods-Glotty_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C32544A14904BE946F762EBDA5E5B43 /* Debug */,
+				60E2D61F97C908CF957D5B6FF991B05A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75E083F8A73E79EA6DEA9F91D51F30B7 /* Build configuration list for PBXNativeTarget "Pods-Glotty_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452BE0BE12264AB3746CD9A3ECB90321 /* Debug */,
+				BBD644262C30038DF9D1115C2D3A0B1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8E26B306AD2AEC77D8323B69F5525AB0 /* Build configuration list for PBXNativeTarget "Blabber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -953,29 +971,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C25EA2C78B7AD57E63374AB38DDA27BE /* Build configuration list for PBXNativeTarget "Pods-Rosetta_Tests" */ = {
+		DABE1E9762FC0A6DD373CC647613F024 /* Build configuration list for PBXNativeTarget "Glotty" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B2ED706AE66F484D7C5394C3FE85C6DC /* Debug */,
-				273A68EA214AE6A2FBF0F220A8641763 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D177948D6EC1F24BD16941944153CAF1 /* Build configuration list for PBXNativeTarget "Rosetta" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D7C25B27565401D1DDE2AA1D5E7F080D /* Debug */,
-				32A15CFA0987E8F8638DB5574B8733CF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E4214489287A0D5ACA5A3E3CB6ED5711 /* Build configuration list for PBXNativeTarget "Pods-Rosetta_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AC24064C2616B1014FAB7BE54BC33805 /* Debug */,
-				8D062AAEDAACAACB7F6C047F9D62EC5A /* Release */,
+				783458E57F41FF730687A127FE66C4AF /* Debug */,
+				1DF34DBBFD2C267C82D2A7FBF557D6F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -2,22 +2,22 @@ PODS:
   - Blabber (1.1.3):
     - Blabber/Core (= 1.1.3)
   - Blabber/Core (1.1.3)
-  - Rosetta/Blabber (0.1.0):
+  - Glotty/Blabber (0.1.0):
     - Blabber
-    - Rosetta/Core
-  - Rosetta/Core (0.1.0)
+    - Glotty/Core
+  - Glotty/Core (0.1.0)
 
 DEPENDENCIES:
-  - Rosetta/Blabber (from `../`)
+  - Glotty/Blabber (from `../`)
 
 EXTERNAL SOURCES:
-  Rosetta:
+  Glotty:
     :path: ../
 
 SPEC CHECKSUMS:
   Blabber: 669f61f7d0a17ed412cb798c1056bb2cc5e88579
-  Rosetta: 3731e91f7993da383bed01a5879d3ada895569d0
+  Glotty: b6f739b6d7f94270ef5dbda58643a652e85d9594
 
-PODFILE CHECKSUM: fd2f27cffcdc0a25b412c237200eb61528a44b21
+PODFILE CHECKSUM: 4b7a81ae9f244e00fe98832565e52e66d48143a3
 
 COCOAPODS: 1.2.1

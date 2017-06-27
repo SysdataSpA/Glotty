@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F589195388D20070C39A"
-               BuildableName = "Rosetta_Example.app"
-               BlueprintName = "Rosetta_Example"
-               ReferencedContainer = "container:Rosetta.xcodeproj">
+               BuildableName = "Glotty_Example.app"
+               BlueprintName = "Glotty_Example"
+               ReferencedContainer = "container:Glotty.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "Rosetta_Tests.xctest"
-               BlueprintName = "Rosetta_Tests"
-               ReferencedContainer = "container:Rosetta.xcodeproj">
+               BuildableName = "Glotty_Tests.xctest"
+               BlueprintName = "Glotty_Tests"
+               ReferencedContainer = "container:Glotty.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "Rosetta_Example.app"
-            BlueprintName = "Rosetta_Example"
-            ReferencedContainer = "container:Rosetta.xcodeproj">
+            BuildableName = "Glotty_Example.app"
+            BlueprintName = "Glotty_Example"
+            ReferencedContainer = "container:Glotty.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "Rosetta_Example.app"
-            BlueprintName = "Rosetta_Example"
-            ReferencedContainer = "container:Rosetta.xcodeproj">
+            BuildableName = "Glotty_Example.app"
+            BlueprintName = "Glotty_Example"
+            ReferencedContainer = "container:Glotty.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "Rosetta_Example.app"
-            BlueprintName = "Rosetta_Example"
-            ReferencedContainer = "container:Rosetta.xcodeproj">
+            BuildableName = "Glotty_Example.app"
+            BlueprintName = "Glotty_Example"
+            ReferencedContainer = "container:Glotty.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

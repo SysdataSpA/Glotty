@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'Rosetta_Example' do
-  pod 'Rosetta/Blabber', :path => '../'
+target 'Glotty_Example' do
+  pod 'Glotty/Blabber', :path => '../'
 
-  target 'Rosetta_Tests' do
+  target 'Glotty_Tests' do
     inherit! :search_paths
 
     

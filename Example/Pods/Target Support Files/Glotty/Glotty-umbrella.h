@@ -15,6 +15,6 @@
 #import "NSLocale+RTUtils.h"
 #import "RTFileManager.h"
 
-FOUNDATION_EXPORT double RosettaVersionNumber;
-FOUNDATION_EXPORT const unsigned char RosettaVersionString[];
+FOUNDATION_EXPORT double GlottyVersionNumber;
+FOUNDATION_EXPORT const unsigned char GlottyVersionString[];
 
