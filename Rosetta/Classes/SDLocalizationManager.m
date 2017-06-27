@@ -185,9 +185,6 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
         
         // reset formatters
         [self resetFormattersAndCalendars];
-
-        // fire the notification
-        [[NSNotificationCenter defaultCenter] postNotificationName:SDLocalizationManagerLanguageDidChangeNotification object:locale];
     }
     else
     {
@@ -201,6 +198,9 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
     self.localizedTables[kSelectedLocaleTablesKey] = [NSMutableDictionary dictionary];
     self.localizedTables[kBaseLocaleTablesKey] = [NSMutableDictionary dictionary];
     self.localizedTables[kDefaultLocaleTablesKey] = [NSMutableDictionary dictionary];
+    
+    // fire the notification
+    [[NSNotificationCenter defaultCenter] postNotificationName:SDLocalizationManagerLanguageDidChangeNotification object:self.selectedLocale];
 }
 
 - (void)setSelectedLocaleWithIdentifier:(NSString *)identifier
@@ -715,6 +715,11 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
 
 #pragma mark - Adding strings
 
+- (void) addStrings:(NSDictionary<NSString*, NSString*>*)strings
+{
+    [self addStrings:strings toTableWithName:@"Localizable"];
+}
+
 - (void) addStrings:(NSDictionary<NSString*, NSString*>*)strings toTableWithName:(NSString*)tableName
 {
     [self addStrings:strings toTableWithName:tableName forLocalization:self.ISOSelectedLocale.languageID];
@@ -752,6 +757,39 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
     
     [dynamicDictionary writeToFile:fileSystemPath atomically:YES];
     
+    [self resetLocalizedTables];
+}
+
+- (void) resetAddedStringsToTableWithName:(NSString*)tableName forLocalization:(NSString*)localization
+{
+    NSString* fileSystemPath = [self fileSystemPathForTable:tableName localization:localization];
+    [RTFileManager deleteFilesAtPath:fileSystemPath];
+    
+    [self resetLocalizedTables];
+}
+
+- (void) resetAllAddedStringsForLocalization:(NSString*)localization
+{
+    NSArray<NSString*>* filePaths = [RTFileManager getFilesContentInDirectoryNamed:self.pathForDynamicStrings];
+    for (NSString* fileName in filePaths)
+    {
+        if([fileName containsString:[NSString stringWithFormat:@"_%@.strings", localization]])
+        {
+            NSString* filePath = [self.pathForDynamicStrings stringByAppendingPathComponent:fileName];
+            [RTFileManager deleteFilesAtPath:filePath];
+        }
+    }
+    [self resetLocalizedTables];
+}
+
+- (void) resetAllAddedStrings
+{
+    NSArray<NSString*>* filePaths = [RTFileManager getFilesContentInDirectoryNamed:self.pathForDynamicStrings];
+    for (NSString* fileName in filePaths)
+    {
+       NSString* filePath = [self.pathForDynamicStrings stringByAppendingPathComponent:fileName];
+        [RTFileManager deleteFilesAtPath:filePath];
+    }
     [self resetLocalizedTables];
 }
 

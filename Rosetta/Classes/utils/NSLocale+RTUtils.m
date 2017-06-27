@@ -137,7 +137,7 @@
 + (BOOL)isLocaleIdentifierAvailableOnSystem:(NSString *)identifier
 {
     NSArray *availableLocales = [NSLocale availableLocaleIdentifiers];
-    return [availableLocales containsObject:identifier];
+    return ([availableLocales containsObject:identifier]||[availableLocales containsObject:[identifier stringByReplacingOccurrencesOfString:@"-" withString:@"_"]]);
 }
 
 @end

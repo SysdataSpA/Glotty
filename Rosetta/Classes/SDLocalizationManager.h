@@ -279,16 +279,34 @@ NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString
  */
 - (NSArray*) arrayOfLocalizedStringsWithPrefix:(NSString*)prefix;
 
-#pragma mark - Adding strings
+#pragma mark - Adding/Removing strings
 
 /**
- * Adds the past string dictionary to the date table. If the table does not exist, it is created. If the table exists the strings are joined to the preexisting ones, overwriting the keys that match.
+ * Adds the given strings to the specific table and localization. Added strings will be maintained permanently. To remove them use resetAddedStringXXX methods.
  *
- * @param strings Local strings dictionary.
- * @param tableName Name of the table to which the strings are to be added.
+ * @param strings dictionary with keys and values for the translations
+ * @param tableName Name of the table to which the strings are to be added
+ * @param localization id of localization of strings.
+ */
+- (void) addStrings:(NSDictionary<NSString*, NSString*>*)strings toTableWithName:(NSString*)tableName forLocalization:(NSString*)localization;
+/**
+ * Like previous method. Localization is the current selected.
  */
 - (void) addStrings:(NSDictionary<NSString*, NSString*>*)strings toTableWithName:(NSString*)tableName;
-- (void) addStrings:(NSDictionary<NSString*, NSString*>*)strings toTableWithName:(NSString*)tableName forLocalization:(NSString*)localization;
+/**
+ * Like previous method. Table is the Localizable one (default table).
+ */
+- (void) addStrings:(NSDictionary<NSString*, NSString*>*)strings;
+
+/**
+ * Removes added strings to the specific table and localization.
+ *
+ * @param tableName Name of the table to which the strings are to be added
+ * @param localization id of localization of strings.
+ */
+- (void) resetAddedStringsToTableWithName:(NSString*)tableName forLocalization:(NSString*)localization;
+- (void) resetAllAddedStringsForLocalization:(NSString*)localization;
+- (void) resetAllAddedStrings;
 
 
 #pragma mark - Formatters & Calendars Management
