@@ -189,7 +189,7 @@
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for Glotty";
-			path = Rosetta;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		6003F594195388D20070C39A /* Supporting Files */ = {
@@ -583,8 +583,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Rosetta/Glotty-Prefix.pch";
-				INFOPLIST_FILE = "Rosetta/Glotty-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/Glotty-Prefix.pch";
+				INFOPLIST_FILE = "Classes/Glotty-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -598,8 +598,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Rosetta/Glotty-Prefix.pch";
-				INFOPLIST_FILE = "Rosetta/Glotty-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/Glotty-Prefix.pch";
+				INFOPLIST_FILE = "Classes/Glotty-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
