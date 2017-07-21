@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #import <Foundation/Foundation.h>
-#import "NSLocale+RTUtils.h"
+#import "NSLocale+Glotty.h"
 #import "SDLocalizationLogger.h"
 
 

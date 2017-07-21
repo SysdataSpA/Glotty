@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		01A75CA209400EDA874B939297ABA413 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */; };
-		091FC0E14C0C30CA5DFFEF550066079D /* RTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4594DA9EDF4878A568D9783CFFAAD9C /* RTFileManager.m */; };
+		091FC0E14C0C30CA5DFFEF550066079D /* GTYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4594DA9EDF4878A568D9783CFFAAD9C /* GTYFileManager.m */; };
 		1B8EC47C4DD20F22E8DFAB8C1427DA09 /* SDLogger+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2823AC29388B56535531F9974B63E7A /* SDLogger+Additions.swift */; };
 		1C209A50EB28D76772FD9C963CC1C20B /* Glotty-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89645E71D944CE0CDF7958434FEBCA7D /* Glotty-dummy.m */; };
 		2CA44343AEADC2F3D89A8897C816CA1B /* SDLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9A92FCFAD29B5734C814F6F80F28 /* SDLogger.m */; };
 		3196F7BA1885C3536815890325D7685D /* SDLogModules.h in Headers */ = {isa = PBXBuildFile; fileRef = 237EDE6CAC2A4D23F9FC1C4A026F15F1 /* SDLogModules.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35F9FB09B229290B3A95782D47FAA031 /* Blabber-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C0EF5C84A5A12912D220C66AAB06F /* Blabber-dummy.m */; };
 		43C32DCD9C74CF91FF23B0CC16BE6A53 /* SDLocalizationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B4E19DCCAC0F8CB9CC3EB1AC5A3C3056 /* SDLocalizationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4767639A5DC1A6B8EE616AA673C2D10F /* NSLocale+RTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6A2A6387A9CA5958215CF166D3045 /* NSLocale+RTUtils.m */; };
+		4767639A5DC1A6B8EE616AA673C2D10F /* NSLocale+Glotty.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6A2A6387A9CA5958215CF166D3045 /* NSLocale+Glotty.m */; };
 		4AFFB24B194F595B512D2425195052BF /* SDLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = DB6B4CF19F2837769DB5352AE19556C8 /* SDLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D669E960659E0767AAF80E8C5832CF6 /* SDLocalizationLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BC7A1F4FA75EB155924AB9EE7A57B41 /* SDLocalizationLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DDAC9AEE40A0222EE8102388FAE89F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */; };
 		53E9056DA7F1FD15F7CE51BC93C7954B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */; };
-		5ABAE20D5D2BD6852247C100E9767BB0 /* RTFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 18EC7B0BBDB3076AB25B7A56AE4BA25A /* RTFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5ABAE20D5D2BD6852247C100E9767BB0 /* GTYFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 18EC7B0BBDB3076AB25B7A56AE4BA25A /* GTYFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EB924DB49DF33AEEC365D30EB354161 /* Blabber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B9A4251A01B6487A38AFCB459091C9 /* Blabber.framework */; };
 		628EBB48629D706F87A4602DC53C7B2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */; };
-		64BF94308F0FF5BB74EB3E36111477DA /* NSLocale+RTUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D63F6A54CB25F52B5E1B9C648E6838 /* NSLocale+RTUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64BF94308F0FF5BB74EB3E36111477DA /* NSLocale+Glotty.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D63F6A54CB25F52B5E1B9C648E6838 /* NSLocale+Glotty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A1D2D91EE56AD37CB0C40ACCE3B5458 /* Glotty-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA55ACA257C57F0298F09331E75DC7D2 /* Glotty-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7CCAE9BD41C5D201EC4EC21339683F8D /* Pods-Glotty_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84439B2106C05B155E3D965B86872D34 /* Pods-Glotty_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CA468676CE7A512B8B7179D0068DF31 /* Pods-Glotty_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54E09B795D474D0083BF897B67F580A1 /* Pods-Glotty_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,8 +62,8 @@
 		0037F4D906F9A7029AB81DF4BDB19BEE /* Pods-Glotty_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Glotty_Tests-dummy.m"; sourceTree = "<group>"; };
 		0D8C49C6576B33C942C5D652251DF326 /* Pods-Glotty_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Glotty_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		0DC6E6A7380B05C217D5180BA5EEC82F /* Pods-Glotty_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Glotty_Tests-resources.sh"; sourceTree = "<group>"; };
-		163B05E292EFB4219175D9010B0FA8FB /* Blabber.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Blabber.modulemap; sourceTree = "<group>"; };
-		18EC7B0BBDB3076AB25B7A56AE4BA25A /* RTFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RTFileManager.h; sourceTree = "<group>"; };
+		163B05E292EFB4219175D9010B0FA8FB /* Blabber.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Blabber.modulemap; sourceTree = "<group>"; };
+		18EC7B0BBDB3076AB25B7A56AE4BA25A /* GTYFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTYFileManager.h; sourceTree = "<group>"; };
 		1C115984D93B61127108F834F366F62E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C7C0D3CBA2719D52B072269748C8685 /* Pods-Glotty_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Glotty_Example-frameworks.sh"; sourceTree = "<group>"; };
 		1F4C0EF5C84A5A12912D220C66AAB06F /* Blabber-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Blabber-dummy.m"; sourceTree = "<group>"; };
@@ -71,37 +71,37 @@
 		237EDE6CAC2A4D23F9FC1C4A026F15F1 /* SDLogModules.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDLogModules.h; path = "Blabber/Classes/Base/obj-c/SDLogModules.h"; sourceTree = "<group>"; };
 		3B97854E168A474E624A3E55538F8591 /* Pods-Glotty_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Glotty_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3BC7A1F4FA75EB155924AB9EE7A57B41 /* SDLocalizationLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SDLocalizationLogger.h; sourceTree = "<group>"; };
-		3C288F2918149A70A1CD2A6E2D239585 /* Blabber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Blabber.framework; path = Blabber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C288F2918149A70A1CD2A6E2D239585 /* Blabber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Blabber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C31FAE9E2A575B096B5FC53FAD2760C /* Blabber-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Blabber-umbrella.h"; sourceTree = "<group>"; };
 		411221621A534A6BDDD05ACAF9093E46 /* Pods-Glotty_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Glotty_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		44B7A85233318B7EE0A042C169EE7F7E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		481DE1AB92088AE03B3F1EFB9C7F305B /* Pods-Glotty_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Glotty_Example.release.xcconfig"; sourceTree = "<group>"; };
-		50D63F6A54CB25F52B5E1B9C648E6838 /* NSLocale+RTUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLocale+RTUtils.h"; sourceTree = "<group>"; };
+		50D63F6A54CB25F52B5E1B9C648E6838 /* NSLocale+Glotty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLocale+Glotty.h"; sourceTree = "<group>"; };
 		53DC9A92FCFAD29B5734C814F6F80F28 /* SDLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDLogger.m; path = "Blabber/Classes/Base/obj-c/SDLogger.m"; sourceTree = "<group>"; };
 		54E09B795D474D0083BF897B67F580A1 /* Pods-Glotty_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Glotty_Example-umbrella.h"; sourceTree = "<group>"; };
 		5E8CA163300E2C9320678397BDDD5E43 /* Pods-Glotty_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Glotty_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		63EE5E8CC754BDA0D4BF10304999BCFF /* Glotty.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Glotty.xcconfig; sourceTree = "<group>"; };
 		69131201E531FDC4D86F98BFF4E6A19A /* SDLocalizationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SDLocalizationManager.m; sourceTree = "<group>"; };
-		6F3589F5E14B3880870DFF1CAE70644C /* Pods_Glotty_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Glotty_Example.framework; path = "Pods-Glotty_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		775B6DC0A4FB794919CDF2D6C23E18BD /* Pods_Glotty_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Glotty_Tests.framework; path = "Pods-Glotty_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F3589F5E14B3880870DFF1CAE70644C /* Pods_Glotty_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glotty_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		775B6DC0A4FB794919CDF2D6C23E18BD /* Pods_Glotty_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glotty_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C8FA252FE5221E98ABAF7812AEAE74 /* Blabber.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Blabber.xcconfig; sourceTree = "<group>"; };
 		7C2DFAAA71CA691E4700D26EFA57C8CE /* Pods-Glotty_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Glotty_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		7FB620527D08C483F977526000931433 /* Glotty-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Glotty-prefix.pch"; sourceTree = "<group>"; };
-		832383F6019E38353DA99DCED0B723F5 /* Pods-Glotty_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Glotty_Tests.modulemap"; sourceTree = "<group>"; };
+		832383F6019E38353DA99DCED0B723F5 /* Pods-Glotty_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Glotty_Tests.modulemap"; sourceTree = "<group>"; };
 		84439B2106C05B155E3D965B86872D34 /* Pods-Glotty_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Glotty_Tests-umbrella.h"; sourceTree = "<group>"; };
 		8552F0757EAE5B69C55AD3CB8EBD47C1 /* Pods-Glotty_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Glotty_Example-resources.sh"; sourceTree = "<group>"; };
 		89645E71D944CE0CDF7958434FEBCA7D /* Glotty-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Glotty-dummy.m"; sourceTree = "<group>"; };
 		90919B93E671E1FBF131F96753819426 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9BAD4119E74DEDD38DFDB932E0FFCFB8 /* Glotty.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Glotty.modulemap; sourceTree = "<group>"; };
-		9D1591EEDE3FD3E055A87111FA93FC80 /* Pods-Glotty_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Glotty_Example.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9BAD4119E74DEDD38DFDB932E0FFCFB8 /* Glotty.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Glotty.modulemap; sourceTree = "<group>"; };
+		9D1591EEDE3FD3E055A87111FA93FC80 /* Pods-Glotty_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Glotty_Example.modulemap"; sourceTree = "<group>"; };
 		9DE53E7197EFED59543CA155005652C6 /* Pods-Glotty_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Glotty_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		A2823AC29388B56535531F9974B63E7A /* SDLogger+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SDLogger+Additions.swift"; path = "Blabber/Classes/Base/swift/SDLogger+Additions.swift"; sourceTree = "<group>"; };
 		A347AFE0C796FC98CCF4861D97CE2166 /* Pods-Glotty_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Glotty_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A6B9A4251A01B6487A38AFCB459091C9 /* Blabber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Blabber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A94F54267438CCEC099BC1BFA4D005C2 /* Glotty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Glotty.framework; path = Glotty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A94F54267438CCEC099BC1BFA4D005C2 /* Glotty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Glotty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E19DCCAC0F8CB9CC3EB1AC5A3C3056 /* SDLocalizationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SDLocalizationManager.h; sourceTree = "<group>"; };
-		CAB6A2A6387A9CA5958215CF166D3045 /* NSLocale+RTUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+RTUtils.m"; sourceTree = "<group>"; };
+		CAB6A2A6387A9CA5958215CF166D3045 /* NSLocale+Glotty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+Glotty.m"; sourceTree = "<group>"; };
 		CC3D49C6874B7D0AAA7E3227FEB6ACD4 /* Pods-Glotty_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Glotty_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD0EC7B21671691C63B6846762062F53 /* SysdataCoreDev-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SysdataCoreDev-Bridging-Header.h"; path = "Blabber/Classes/Base/swift/SysdataCoreDev-Bridging-Header.h"; sourceTree = "<group>"; };
 		D01A43792D3E57FD74E474E690616114 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		DB6B4CF19F2837769DB5352AE19556C8 /* SDLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDLogger.h; path = "Blabber/Classes/Base/obj-c/SDLogger.h"; sourceTree = "<group>"; };
 		E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F1B55225C270EA4C027F85055E84E99B /* Blabber-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Blabber-prefix.pch"; sourceTree = "<group>"; };
-		F4594DA9EDF4878A568D9783CFFAAD9C /* RTFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RTFileManager.m; sourceTree = "<group>"; };
+		F4594DA9EDF4878A568D9783CFFAAD9C /* GTYFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTYFileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,7 +275,6 @@
 			children = (
 				F8E6004B8C15F60E14A7D38E1DD8BAEF /* Classes */,
 			);
-			name = Glotty;
 			path = Glotty;
 			sourceTree = "<group>";
 		};
@@ -302,12 +301,11 @@
 		D9CEC35138B9B7806F749D148348B853 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				50D63F6A54CB25F52B5E1B9C648E6838 /* NSLocale+RTUtils.h */,
-				CAB6A2A6387A9CA5958215CF166D3045 /* NSLocale+RTUtils.m */,
-				18EC7B0BBDB3076AB25B7A56AE4BA25A /* RTFileManager.h */,
-				F4594DA9EDF4878A568D9783CFFAAD9C /* RTFileManager.m */,
+				50D63F6A54CB25F52B5E1B9C648E6838 /* NSLocale+Glotty.h */,
+				CAB6A2A6387A9CA5958215CF166D3045 /* NSLocale+Glotty.m */,
+				18EC7B0BBDB3076AB25B7A56AE4BA25A /* GTYFileManager.h */,
+				F4594DA9EDF4878A568D9783CFFAAD9C /* GTYFileManager.m */,
 			);
-			name = utils;
 			path = utils;
 			sourceTree = "<group>";
 		};
@@ -319,7 +317,6 @@
 				69131201E531FDC4D86F98BFF4E6A19A /* SDLocalizationManager.m */,
 				D9CEC35138B9B7806F749D148348B853 /* utils */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -347,7 +344,6 @@
 				D8BDEE9059BD2F2B4F3642757F81E38C /* Core */,
 				9579C475E9E5891BD96DED29F188EA6B /* Support Files */,
 			);
-			name = Blabber;
 			path = Blabber;
 			sourceTree = "<group>";
 		};
@@ -375,8 +371,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A1D2D91EE56AD37CB0C40ACCE3B5458 /* Glotty-umbrella.h in Headers */,
-				64BF94308F0FF5BB74EB3E36111477DA /* NSLocale+RTUtils.h in Headers */,
-				5ABAE20D5D2BD6852247C100E9767BB0 /* RTFileManager.h in Headers */,
+				64BF94308F0FF5BB74EB3E36111477DA /* NSLocale+Glotty.h in Headers */,
+				5ABAE20D5D2BD6852247C100E9767BB0 /* GTYFileManager.h in Headers */,
 				4D669E960659E0767AAF80E8C5832CF6 /* SDLocalizationLogger.h in Headers */,
 				43C32DCD9C74CF91FF23B0CC16BE6A53 /* SDLocalizationManager.h in Headers */,
 			);
@@ -518,8 +514,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C209A50EB28D76772FD9C963CC1C20B /* Glotty-dummy.m in Sources */,
-				4767639A5DC1A6B8EE616AA673C2D10F /* NSLocale+RTUtils.m in Sources */,
-				091FC0E14C0C30CA5DFFEF550066079D /* RTFileManager.m in Sources */,
+				4767639A5DC1A6B8EE616AA673C2D10F /* NSLocale+Glotty.m in Sources */,
+				091FC0E14C0C30CA5DFFEF550066079D /* GTYFileManager.m in Sources */,
 				A5F119BA2C556AD2B2719E0E7C893E3B /* SDLocalizationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,8 +12,8 @@
 
 #import "SDLocalizationLogger.h"
 #import "SDLocalizationManager.h"
-#import "NSLocale+RTUtils.h"
-#import "RTFileManager.h"
+#import "NSLocale+Glotty.h"
+#import "GTYFileManager.h"
 
 FOUNDATION_EXPORT double GlottyVersionNumber;
 FOUNDATION_EXPORT const unsigned char GlottyVersionString[];

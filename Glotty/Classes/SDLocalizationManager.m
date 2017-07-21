@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #import "SDLocalizationManager.h"
-#import "RTFileManager.h"
+#import "GTYFileManager.h"
 
 #define USER_DEF_LOCALE_KEY             @"APP_LANGUAGE_SETTING"
 #define USER_DEF_DATE_FORMAT            @"LM_USER_DEF_DATE_FORMAT"
@@ -142,7 +142,7 @@ UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type)
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetTimeZone) name:NSSystemTimeZoneDidChangeNotification object:nil];
         
         NSString* path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"Localizations"];
-        if ([RTFileManager createDirectoryAtPath:path withIntermediateDirectories:YES])
+        if ([GTYFileManager createDirectoryAtPath:path withIntermediateDirectories:YES])
         {
             self.pathForDynamicStrings = path;
         }
@@ -802,20 +802,20 @@ UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type)
 - (void) resetAddedStringsToTableWithName:(NSString*)tableName forLocalization:(NSString*)localization
 {
     NSString* fileSystemPath = [self fileSystemPathForTable:tableName localization:localization];
-    [RTFileManager deleteFilesAtPath:fileSystemPath];
+    [GTYFileManager deleteFilesAtPath:fileSystemPath];
     
     [self resetLocalizedTables];
 }
 
 - (void) resetAllAddedStringsForLocalization:(NSString*)localization
 {
-    NSArray<NSString*>* filePaths = [RTFileManager getFilesContentInDirectoryNamed:self.pathForDynamicStrings];
+    NSArray<NSString*>* filePaths = [GTYFileManager getFilesContentInDirectoryNamed:self.pathForDynamicStrings];
     for (NSString* fileName in filePaths)
     {
         if([fileName containsString:[NSString stringWithFormat:@"_%@.strings", localization]])
         {
             NSString* filePath = [self.pathForDynamicStrings stringByAppendingPathComponent:fileName];
-            [RTFileManager deleteFilesAtPath:filePath];
+            [GTYFileManager deleteFilesAtPath:filePath];
         }
     }
     [self resetLocalizedTables];
@@ -823,11 +823,11 @@ UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type)
 
 - (void) resetAllAddedStrings
 {
-    NSArray<NSString*>* filePaths = [RTFileManager getFilesContentInDirectoryNamed:self.pathForDynamicStrings];
+    NSArray<NSString*>* filePaths = [GTYFileManager getFilesContentInDirectoryNamed:self.pathForDynamicStrings];
     for (NSString* fileName in filePaths)
     {
        NSString* filePath = [self.pathForDynamicStrings stringByAppendingPathComponent:fileName];
-        [RTFileManager deleteFilesAtPath:filePath];
+        [GTYFileManager deleteFilesAtPath:filePath];
     }
     [self resetLocalizedTables];
 }

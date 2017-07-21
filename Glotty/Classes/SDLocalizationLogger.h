@@ -3,7 +3,7 @@
 #import <UIKit/UIKit.h>
 
 // This code is compatible with our logger "Blabber".
-#define kLocalizationManagerLogModuleName @"Rosetta"
+#define kLocalizationManagerLogModuleName @"Glotty"
 
 #if BLABBER
 #import <Blabber/SDLogger.h>

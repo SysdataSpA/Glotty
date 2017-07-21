@@ -14,7 +14,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSLocale (RTUtils)
+@interface NSLocale (Glotty)
 
 - (NSLocaleLanguageDirection) lineDirection;
 - (NSLocaleLanguageDirection) characterDirection;

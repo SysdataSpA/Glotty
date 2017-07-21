@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import "NSLocale+RTUtils.h"
+#import "NSLocale+Glotty.h"
 
-@implementation NSLocale (RTUtils)
+@implementation NSLocale (Glotty)
 
 - (NSLocaleLanguageDirection)lineDirection
 {

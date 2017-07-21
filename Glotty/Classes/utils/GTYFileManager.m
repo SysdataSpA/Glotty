@@ -12,11 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import "RTFileManager.h"
+#import "GTYFileManager.h"
 #import "SDLocalizationLogger.h"
 
 
-@implementation RTFileInfo
+@implementation GTYFileInfo
 
 
 @end
@@ -24,7 +24,7 @@
 
 
 
-@implementation RTFileManager
+@implementation GTYFileManager
 
 + (instancetype)sharedManager
 {
@@ -86,7 +86,7 @@
 
 + (NSString*) getPathOfResourceDirectory
 {
-    NSString* cacheDirectory = [RTFileManager sharedManager].cacheDirectory;
+    NSString* cacheDirectory = [GTYFileManager sharedManager].cacheDirectory;
     return [cacheDirectory stringByAppendingPathComponent:RESOURCES_DIRECTORY];
 }
 
@@ -94,7 +94,7 @@
 {
     NSFileManager* fm = [NSFileManager defaultManager];
 
-    NSString* resourceCache = [RTFileManager getPathOfResourceDirectory];
+    NSString* resourceCache = [GTYFileManager getPathOfResourceDirectory];
     NSError* error = nil;
     if(![fm removeItemAtPath:resourceCache error:&error])
     {
@@ -151,14 +151,14 @@
 
 + (NSArray*) getInfoAboutFilesContentInDirectoryNamed:(NSString*)directoryName
 {
-	NSArray* dirContents = [RTFileManager getFilesContentInDirectoryNamed:directoryName];
+	NSArray* dirContents = [GTYFileManager getFilesContentInDirectoryNamed:directoryName];
 	NSMutableArray* arrayFileInfo = [[NSMutableArray alloc] initWithCapacity:0];
 
 	for (NSString* fileName in dirContents)
 	{
 		NSString* filePath = [directoryName stringByAppendingPathComponent:fileName];
 
-		RTFileInfo * fileInfo = [RTFileManager getInfoAboutFileAtPath:filePath];
+		GTYFileInfo * fileInfo = [GTYFileManager getInfoAboutFileAtPath:filePath];
         
         if (fileInfo)
             [arrayFileInfo addObject:fileInfo];
@@ -169,7 +169,7 @@
 
 
 
-+ (RTFileInfo*) getInfoAboutFileAtPath:(NSString*)path
++ (GTYFileInfo*) getInfoAboutFileAtPath:(NSString*)path
 {
 	NSError* error = nil;
 	NSDictionary* attrs = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:&error];
@@ -184,7 +184,7 @@
 		NSDate* creationDate = (NSDate*)[attrs objectForKey:NSFileCreationDate];
 		NSDate* modificationDate = (NSDate*)[attrs objectForKey:NSFileModificationDate];
 
-		RTFileInfo* fileInfo = [[RTFileInfo alloc] init];
+		GTYFileInfo* fileInfo = [[GTYFileInfo alloc] init];
 		fileInfo.name = [path lastPathComponent];
 		fileInfo.modificationDateOnServer = creationDate;
 		fileInfo.downloadDateLocal = modificationDate;
@@ -194,28 +194,28 @@
 	}
 }
 
-+ (RTFileInfo*) getInfoAboutFileNamed:(NSString*)fileName inDirectoryNamed:(NSString*)directoryName
++ (GTYFileInfo*) getInfoAboutFileNamed:(NSString*)fileName inDirectoryNamed:(NSString*)directoryName
 {
-	fileName = [RTFileManager getFileNameFromUrl:fileName];
+	fileName = [GTYFileManager getFileNameFromUrl:fileName];
 
 	NSString* filePath = [directoryName stringByAppendingPathComponent:fileName];
-	return [RTFileManager getInfoAboutFileAtPath:filePath];
+	return [GTYFileManager getInfoAboutFileAtPath:filePath];
 }
 
 
 + (BOOL) deleteFilesContentInDirectoryNamed:(NSString*)directoryName withModifyDateBefore:(NSDate*)expirationDate
 {
 	
-	NSArray* dirContents = [RTFileManager getFilesContentInDirectoryNamed:directoryName];
+	NSArray* dirContents = [GTYFileManager getFilesContentInDirectoryNamed:directoryName];
 	
 	for (NSString* fileName in dirContents)
 	{
 		NSString* filePath = [directoryName stringByAppendingPathComponent:fileName];
         
-		RTFileInfo * fileInfo = [RTFileManager getInfoAboutFileAtPath:filePath];
+		GTYFileInfo * fileInfo = [GTYFileManager getInfoAboutFileAtPath:filePath];
         
         if([fileInfo.downloadDateLocal compare:expirationDate] == NSOrderedAscending)
-           [RTFileManager deleteFilesAtPath:filePath];
+           [GTYFileManager deleteFilesAtPath:filePath];
 	}
     
 	return YES;
@@ -242,7 +242,7 @@
 #pragma mark - Images
 + (UIImage*) getImageNamed:(NSString*)fileName inDirectoryNamed:(NSString*)directoryName
 {
-	fileName = [RTFileManager getFileNameFromUrl:fileName];
+	fileName = [GTYFileManager getFileNameFromUrl:fileName];
 
 	NSString* filePath = [directoryName stringByAppendingPathComponent:fileName];
 
@@ -251,7 +251,7 @@
 
 + (void) saveImage:(UIImage*)image named:(NSString*)fileName inDirectoryNamed:(NSString*)directoryName
 {
-	fileName = [RTFileManager getFileNameFromUrl:fileName];
+	fileName = [GTYFileManager getFileNameFromUrl:fileName];
 
 	NSString* filePath = [directoryName stringByAppendingPathComponent:fileName];
 

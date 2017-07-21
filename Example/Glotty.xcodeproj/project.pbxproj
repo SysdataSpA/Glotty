@@ -53,7 +53,6 @@
 		346B1CBC1F026589008803C9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		346B1CBD1F026589008803C9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		346B1CBE1F02660C008803C9 /* SDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDViewController.xib; sourceTree = "<group>"; };
-		35B2B89124858890D9A38C08 /* Rosetta.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Rosetta.podspec; path = ../Rosetta.podspec; sourceTree = "<group>"; };
 		378271BFFE7BB0467E612970 /* Pods-Glotty_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glotty_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Glotty_Example/Pods-Glotty_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		37886D3D6FABA60C6C1E2127 /* Pods-Rosetta_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rosetta_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rosetta_Tests/Pods-Rosetta_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A2E5DEE15D3BBA9DB3E3F20 /* Pods_Glotty_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glotty_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,7 +224,6 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				35B2B89124858890D9A38C08 /* Rosetta.podspec */,
 				76729B359F6A18ED0DCB5BB3 /* README.md */,
 				8E830927603CC85E510F8FDD /* LICENSE */,
 			);

@@ -16,7 +16,7 @@
 
 #define RESOURCES_DIRECTORY @"resources"
 
-@interface RTFileInfo : NSObject
+@interface GTYFileInfo : NSObject
 
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSDate* modificationDateOnServer;
@@ -26,7 +26,7 @@
 @end
 
 
-@interface RTFileManager : NSObject
+@interface GTYFileManager : NSObject
 
 @property (nonatomic, strong) NSString* cacheDirectory;
 @property (nonatomic, strong) NSString* documentsDirectory;
@@ -46,8 +46,8 @@
 + (NSArray*) getFilesContentInDirectoryNamed:(NSString*)directoryName;
 
 + (NSArray*) getInfoAboutFilesContentInDirectoryNamed:(NSString*)directoryName;
-+ (RTFileInfo*) getInfoAboutFileAtPath:(NSString*)path;
-+ (RTFileInfo*) getInfoAboutFileNamed:(NSString*)fileName inDirectoryNamed:(NSString*)directoryName;
++ (GTYFileInfo*) getInfoAboutFileAtPath:(NSString*)path;
++ (GTYFileInfo*) getInfoAboutFileNamed:(NSString*)fileName inDirectoryNamed:(NSString*)directoryName;
 
 + (BOOL) deleteFilesAtPath:(NSString*)filePath;
 + (BOOL) deleteFilesContentInDirectoryNamed:(NSString*)directoryName withModifyDateBefore:(NSDate*)expirationDate;
