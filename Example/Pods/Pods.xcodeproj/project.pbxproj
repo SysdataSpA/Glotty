@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		01A75CA209400EDA874B939297ABA413 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BB18268F36DBEE0B9DAFA764F5D52F /* Foundation.framework */; };
+		064F7E5520484E2400887CE9 /* SDLocalizationManagerModels.h in Headers */ = {isa = PBXBuildFile; fileRef = 064F7E5320484E2300887CE9 /* SDLocalizationManagerModels.h */; };
+		064F7E5620484E2400887CE9 /* SDLocalizationManagerModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 064F7E5420484E2300887CE9 /* SDLocalizationManagerModels.m */; };
 		091FC0E14C0C30CA5DFFEF550066079D /* GTYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4594DA9EDF4878A568D9783CFFAAD9C /* GTYFileManager.m */; };
 		1B8EC47C4DD20F22E8DFAB8C1427DA09 /* SDLogger+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2823AC29388B56535531F9974B63E7A /* SDLogger+Additions.swift */; };
 		1C209A50EB28D76772FD9C963CC1C20B /* Glotty-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89645E71D944CE0CDF7958434FEBCA7D /* Glotty-dummy.m */; };
@@ -60,6 +62,8 @@
 
 /* Begin PBXFileReference section */
 		0037F4D906F9A7029AB81DF4BDB19BEE /* Pods-Glotty_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Glotty_Tests-dummy.m"; sourceTree = "<group>"; };
+		064F7E5320484E2300887CE9 /* SDLocalizationManagerModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLocalizationManagerModels.h; sourceTree = "<group>"; };
+		064F7E5420484E2300887CE9 /* SDLocalizationManagerModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLocalizationManagerModels.m; sourceTree = "<group>"; };
 		0D8C49C6576B33C942C5D652251DF326 /* Pods-Glotty_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Glotty_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		0DC6E6A7380B05C217D5180BA5EEC82F /* Pods-Glotty_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Glotty_Tests-resources.sh"; sourceTree = "<group>"; };
 		163B05E292EFB4219175D9010B0FA8FB /* Blabber.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Blabber.modulemap; sourceTree = "<group>"; };
@@ -315,6 +319,8 @@
 				3BC7A1F4FA75EB155924AB9EE7A57B41 /* SDLocalizationLogger.h */,
 				B4E19DCCAC0F8CB9CC3EB1AC5A3C3056 /* SDLocalizationManager.h */,
 				69131201E531FDC4D86F98BFF4E6A19A /* SDLocalizationManager.m */,
+				064F7E5320484E2300887CE9 /* SDLocalizationManagerModels.h */,
+				064F7E5420484E2300887CE9 /* SDLocalizationManagerModels.m */,
 				D9CEC35138B9B7806F749D148348B853 /* utils */,
 			);
 			path = Classes;
@@ -372,6 +378,7 @@
 			files = (
 				6A1D2D91EE56AD37CB0C40ACCE3B5458 /* Glotty-umbrella.h in Headers */,
 				64BF94308F0FF5BB74EB3E36111477DA /* NSLocale+Glotty.h in Headers */,
+				064F7E5520484E2400887CE9 /* SDLocalizationManagerModels.h in Headers */,
 				5ABAE20D5D2BD6852247C100E9767BB0 /* GTYFileManager.h in Headers */,
 				4D669E960659E0767AAF80E8C5832CF6 /* SDLocalizationLogger.h in Headers */,
 				43C32DCD9C74CF91FF23B0CC16BE6A53 /* SDLocalizationManager.h in Headers */,
@@ -514,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C209A50EB28D76772FD9C963CC1C20B /* Glotty-dummy.m in Sources */,
+				064F7E5620484E2400887CE9 /* SDLocalizationManagerModels.m in Sources */,
 				4767639A5DC1A6B8EE616AA673C2D10F /* NSLocale+Glotty.m in Sources */,
 				091FC0E14C0C30CA5DFFEF550066079D /* GTYFileManager.m in Sources */,
 				A5F119BA2C556AD2B2719E0E7C893E3B /* SDLocalizationManager.m in Sources */,

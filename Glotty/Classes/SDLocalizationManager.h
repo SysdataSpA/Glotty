@@ -43,6 +43,12 @@ NSString* SDLocalizedStringFromTableWithDefault(NSString * key,NSString *table, 
 
 NSString* SDLocalizedStringWithPlaceholders(NSString* key, NSDictionary<NSString*, NSString*>* placeholders);
 
+NSString* SDLocalizedStringInBundleForClass(NSString * key, Class bundleClass);
+
+NSString* SDLocalizedStringFromTableInBundleForClass(NSString * key, NSString *table, Class bundleClass);
+
+NSString* SDLocalizedStringFromTableInBundleForClassWithDefault(NSString * key, NSString *table, Class bundleClass, NSString *val);
+
 UIImage* SDLocalizedImage(NSString * key);
 UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type);
 
@@ -275,6 +281,20 @@ UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type);
 - (NSString*) localizedKey:(NSString*)key fromTable:(NSString*)tableName placeholderDictionary:(NSDictionary<NSString*, NSString*>*)placeholderDictionary withDefaultValue:(NSString*)defaultValue;
 
 /**
+ * Returns the localized key value in the past strings associated with the selectedLocale.
+ *
+ * Search is done first using the selectedLocale, then using any locale that is not specific to country, and finally using the defaultLocale.
+ *
+ * @param key The localized key.
+ * @param tableName The .strings name that contains the key.
+ * @param bundleClass A class contained in the same bundle of the table. Typically this is the caller class. This is useful to load tables from frameworks. The manager will search into the main bundle and then into the given bundle.
+ * @param defaultValue The default value to be returned if the key does not exist.
+ *
+ * @return The value associated with the localized key or the default value passed.
+ */
+- (NSString *)localizedKey:(NSString *)key fromTable:(NSString *)tableName inBundleForClass:(Class)bundleClass withDefaultValue:(NSString *)defaultValue;
+
+/**
  * Retrieves and returns all localized strings associated with keys that have the format "<prefix>.% D"
  *
  * @param prefix The prefix of the localized key list to retrieve.
@@ -493,3 +513,4 @@ UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type);
 @property (nonatomic, strong) NSCalendar* gmtCalendar;
 
 @end
+
