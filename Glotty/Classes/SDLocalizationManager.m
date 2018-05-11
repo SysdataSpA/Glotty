@@ -511,12 +511,7 @@ UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type)
     NSMutableArray *names = [NSMutableArray arrayWithCapacity:self.locales.count];
     for (NSString *localeId in self.locales)
     {
-        NSString *name = [self.ISOSelectedLocale displayNameForKey:NSLocaleIdentifier value:localeId];
-        if (name.length == 0)
-        {
-            SDLogModuleWarning(kLocalizationManagerLogModuleName, @"Name for locale %@ not found", localeId);
-            name = @"";
-        }
+        NSString *name = [self localeNameForLocaleIdentifierInSelectedLocale:localeId];
         [names addObject:name];
     }
     return [names copy];
@@ -527,13 +522,7 @@ UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type)
     NSMutableArray *names = [NSMutableArray arrayWithCapacity:self.locales.count];
     for (NSString *localeId in self.locales)
     {
-        NSLocale *locale = [NSLocale localeWithLocaleIdentifier:localeId];
-        NSString *name = [locale displayNameForKey:NSLocaleIdentifier value:locale.localeIdentifier];
-        if (name.length == 0)
-        {
-            SDLogModuleWarning(kLocalizationManagerLogModuleName, @"Name for locale %@ not found", localeId);
-            name = @"";
-        }
+        NSString *name = [self localeNameForLocaleIdentifier:localeId];
         [names addObject:name];
     }
     return [names copy];
@@ -563,6 +552,30 @@ UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type)
         }
     }
     return [names copy];
+}
+
+- (NSString *) localeNameForLocaleIdentifier:(NSString *)identifier
+{
+    NSLocale *locale = [NSLocale localeWithLocaleIdentifier:identifier];
+    NSString *name = [locale displayNameForKey:NSLocaleIdentifier value:locale.localeIdentifier];
+    if (name.length == 0)
+    {
+        SDLogModuleWarning(kLocalizationManagerLogModuleName, @"Name for locale %@ not found", identifier);
+        name = @"";
+    }
+    return name;
+}
+
+- (NSString *) localeNameForLocaleIdentifierInSelectedLocale:(NSString *)identifier
+{
+    NSLocale *locale = [NSLocale localeWithLocaleIdentifier:identifier];
+    NSString *name = [[self ISOSelectedLocale] displayNameForKey:NSLocaleIdentifier value:locale.localeIdentifier];
+    if (name.length == 0)
+    {
+        SDLogModuleWarning(kLocalizationManagerLogModuleName, @"Name for locale %@ not found", identifier);
+        name = @"";
+    }
+    return name;
 }
 
 #pragma mark - Localized Strings

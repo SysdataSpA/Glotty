@@ -192,30 +192,44 @@ UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type);
 /**
  * Returns the names of localized supported locales in the currently selected language.
  *
- * @resurn an array of NSString representing the names of supported locales.
+ * @return an array of NSString representing the names of supported locales.
  */
 - (NSArray*) supportedLocalesNamesInSelectedLocale;
 
 /**
  * Returns the names of supported locales located in their respective language.
  *
- * @resurn an array of NSString representing the names of supported locales.
+ * @return an array of NSString representing the names of supported locales.
  */
 - (NSArray*) supportedLocalesNamesInCorrespondingLocale;
 
 /**
  * Returns the names of the supported locales as reported in the Localizable.strings file associated with the selectedLocale.
  *
- * @resurn an array of NSString representing the names of supported locales.
+ * @return an array of NSString representing the names of supported locales.
  */
 - (NSArray*) supportedLocalesNamesInLocalizableStrings;
 
 /**
  * Returns the names of supported locales as reported in the .strings file indicated and associated with the selectedLocale.
  *
- * @resurn an array of NSString representing the names of supported locales.
+ * @return an array of NSString representing the names of supported locales.
  */
 - (NSArray *) supportedLocalesNamesInTableWithName:(NSString*)tableName;
+
+/**
+ * Returns the name of given locale in the corresponding language.
+ *
+ * @return The name of given locale in the corresponding language.
+ */
+- (NSString *) localeNameForLocaleIdentifier:(NSString *)identifier;
+
+/**
+ * Returns the name of given locale in selected language.
+ *
+ * @return The name of given locale in selected language.
+ */
+- (NSString *) localeNameForLocaleIdentifierInSelectedLocale:(NSString *)identifier;
 
 #pragma mark - Localized Strings
 /**
