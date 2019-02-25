@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Glotty'
-  s.version          = '0.3.2'
+  s.version          = '0.3.3'
   s.summary          = 'Easy and flexible managing of in-app localizations'
 
 # This description is used to generate tags and improve search results.

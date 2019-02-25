@@ -621,23 +621,22 @@ UIImage* SDLocalizedImageWithNameAndExtension(NSString * key, NSString *type)
 
 - (NSString *)localizedKey:(NSString *)key fromTable:(NSString *)tableName inBundleForClass:(Class)bundleClass withDefaultValue:(NSString *)defaultValue
 {
+    NSString* table = [tableName stringByReplacingOccurrencesOfString:@".strings" withString:@""];
     // find the bundle
     NSBundle* bundle = [self bundleForClass:bundleClass];
-    NSString* defaultInMainBundle = [bundle isEqual:[NSBundle mainBundle]] ? defaultValue : nil;
     
     // fallback on standard call
     if (!self.selectedLocale)
     {
-        NSString* value = [[NSBundle mainBundle] localizedStringForKey:key value:defaultInMainBundle table:tableName];
-        if ([value isEqualToString:key])
+        NSString* value = [[NSBundle mainBundle] localizedStringForKey:key value:defaultValue table:table];
+        if ([value isEqualToString:key] || [value isEqualToString:defaultValue])
         {
-            value = [bundle localizedStringForKey:key value:defaultValue table:tableName];
+            value = [bundle localizedStringForKey:key value:defaultValue table:table];
         }
         return value;
     }
     
     NSString* localizedString;
-    NSString* table = [tableName stringByReplacingOccurrencesOfString:@".strings" withString:@""];
     
     // procedendo prima nella struttura in memoria e poi nel file system
     // cerco prima nella lingua selezionata
